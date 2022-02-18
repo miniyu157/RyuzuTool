@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0BAA7D36-7B01-47DA-A7A8-85FF01226EF1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Main.My.MyApplication</StartupObject>
+    <RootNamespace>Main</RootNamespace>
+    <AssemblyName>RyuzuTool</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>RyuzuTool.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>RyuzuTool.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>QF.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DSAPI">
+      <HintPath>..\..\..\DSAPI.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="MaterialSkin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="Transitions, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\dot-net-transitions.1.2.1.0\lib\net40-full\Transitions.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutMe.designer.vb">
+      <DependentUpon>AboutMe.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AboutMe.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeLogDisplay.designer.vb">
+      <DependentUpon>ChangeLogDisplay.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeLogDisplay.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChangeQQHand.designer.vb">
+      <DependentUpon>ChangeQQHand.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ChangeQQHand.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CRyu.designer.vb">
+      <DependentUpon>CRyu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CRyu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Donation.designer.vb">
+      <DependentUpon>Donation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Donation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FirmUpdate.designer.vb">
+      <DependentUpon>FirmUpdate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FirmUpdate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ReleaseManage.designer.vb">
+      <DependentUpon>ReleaseManage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReleaseManage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ryu.designer.vb">
+      <DependentUpon>Ryu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ryu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RyuFirmUpdate.designer.vb">
+      <DependentUpon>RyuFirmUpdate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RyuFirmUpdate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RyuUpdate.designer.vb">
+      <DependentUpon>RyuUpdate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="RyuUpdate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetRyuFolder.designer.vb">
+      <DependentUpon>SetRyuFolder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SetRyuFolder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetYuzuFolder.designer.vb">
+      <DependentUpon>SetYuzuFolder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SetYuzuFolder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowMessageBox.designer.vb">
+      <DependentUpon>ShowMessageBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ShowMessageBox.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YuzuEmuUpdate.designer.vb">
+      <DependentUpon>YuzuEmuUpdate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="YuzuEmuUpdate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AboutMe.resx">
+      <DependentUpon>AboutMe.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeLogDisplay.resx">
+      <DependentUpon>ChangeLogDisplay.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChangeQQHand.resx">
+      <DependentUpon>ChangeQQHand.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CRyu.resx">
+      <DependentUpon>CRyu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Donation.resx">
+      <DependentUpon>Donation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FirmUpdate.resx">
+      <DependentUpon>FirmUpdate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReleaseManage.resx">
+      <DependentUpon>ReleaseManage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ryu.resx">
+      <DependentUpon>Ryu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RyuFirmUpdate.resx">
+      <DependentUpon>RyuFirmUpdate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RyuUpdate.resx">
+      <DependentUpon>RyuUpdate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetRyuFolder.resx">
+      <DependentUpon>SetRyuFolder.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetYuzuFolder.resx">
+      <DependentUpon>SetYuzuFolder.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowMessageBox.resx">
+      <DependentUpon>ShowMessageBox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YuzuEmuUpdate.resx">
+      <DependentUpon>YuzuEmuUpdate.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="QF.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
