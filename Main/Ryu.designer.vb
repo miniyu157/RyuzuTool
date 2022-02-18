@@ -65,6 +65,10 @@ Partial Class Ryu
         Me.ProgressBar3 = New System.Windows.Forms.ProgressBar()
         Me.Label30 = New System.Windows.Forms.Label()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.PictureBox12 = New System.Windows.Forms.PictureBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel1.SuspendLayout()
@@ -78,6 +82,7 @@ Partial Class Ryu
         CType(Me.PictureBox11, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage4.SuspendLayout()
+        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'TabControl1
@@ -565,6 +570,10 @@ Partial Class Ryu
         'TabPage4
         '
         Me.TabPage4.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(58, Byte), Integer))
+        Me.TabPage4.Controls.Add(Me.Label8)
+        Me.TabPage4.Controls.Add(Me.Label5)
+        Me.TabPage4.Controls.Add(Me.Label4)
+        Me.TabPage4.Controls.Add(Me.PictureBox12)
         Me.TabPage4.Controls.Add(Me.Label31)
         Me.TabPage4.Controls.Add(Me.ProgressBar3)
         Me.TabPage4.Controls.Add(Me.Label30)
@@ -606,6 +615,50 @@ Partial Class Ryu
         Me.Label30.TabIndex = 20
         Me.Label30.Text = "正在安装文件"
         '
+        'PictureBox12
+        '
+        Me.PictureBox12.Image = Global.Main.My.Resources.Resources.Ryujinx
+        Me.PictureBox12.Location = New System.Drawing.Point(439, 48)
+        Me.PictureBox12.Name = "PictureBox12"
+        Me.PictureBox12.Size = New System.Drawing.Size(62, 62)
+        Me.PictureBox12.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox12.TabIndex = 23
+        Me.PictureBox12.TabStop = False
+        '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Font = New System.Drawing.Font("微软雅黑 Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.White
+        Me.Label4.Location = New System.Drawing.Point(62, 227)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(234, 21)
+        Me.Label4.TabIndex = 24
+        Me.Label4.Text = "若安装时间超过了五分钟，点击"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label5.Font = New System.Drawing.Font("微软雅黑 Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.DeepSkyBlue
+        Me.Label5.Location = New System.Drawing.Point(297, 227)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(42, 21)
+        Me.Label5.TabIndex = 25
+        Me.Label5.Text = "这里"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("微软雅黑 Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.White
+        Me.Label8.Location = New System.Drawing.Point(340, 227)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(42, 21)
+        Me.Label8.TabIndex = 26
+        Me.Label8.Text = "解决"
+        '
         'Ryu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
@@ -636,6 +689,7 @@ Partial Class Ryu
         CType(Me.PictureBox10, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage4.ResumeLayout(False)
         Me.TabPage4.PerformLayout()
+        CType(Me.PictureBox12, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -682,4 +736,8 @@ Partial Class Ryu
     Friend WithEvents ProgressBar3 As ProgressBar
     Friend WithEvents Label30 As Label
     Friend WithEvents Label11 As Label
+    Friend WithEvents PictureBox12 As PictureBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents Label4 As Label
 End Class

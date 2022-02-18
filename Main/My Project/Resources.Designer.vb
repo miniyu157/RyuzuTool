@@ -93,6 +93,16 @@ Namespace My.Resources
         '''<summary>
         '''  查找 System.Drawing.Bitmap 类型的本地化资源。
         '''</summary>
+        Friend ReadOnly Property bilibili_line() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("bilibili_line", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找 System.Drawing.Bitmap 类型的本地化资源。
+        '''</summary>
         Friend ReadOnly Property Donation() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Donation", resourceCulture)
@@ -116,6 +126,16 @@ Namespace My.Resources
         Friend ReadOnly Property Firm() As System.Drawing.Bitmap
             Get
                 Dim obj As Object = ResourceManager.GetObject("Firm", resourceCulture)
+                Return CType(obj,System.Drawing.Bitmap)
+            End Get
+        End Property
+        
+        '''<summary>
+        '''  查找 System.Drawing.Bitmap 类型的本地化资源。
+        '''</summary>
+        Friend ReadOnly Property github_fill() As System.Drawing.Bitmap
+            Get
+                Dim obj As Object = ResourceManager.GetObject("github_fill", resourceCulture)
                 Return CType(obj,System.Drawing.Bitmap)
             End Get
         End Property

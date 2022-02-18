@@ -89,6 +89,9 @@ Partial Class Form1
         Me.Label19 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.TabPage7 = New System.Windows.Forms.TabPage()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.Label27 = New System.Windows.Forms.Label()
         Me.PictureBox12 = New System.Windows.Forms.PictureBox()
         Me.Label31 = New System.Windows.Forms.Label()
         Me.ProgressBar3 = New System.Windows.Forms.ProgressBar()
@@ -236,7 +239,7 @@ Partial Class Form1
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(28, 17)
         Me.Label3.TabIndex = 63
-        Me.Label3.Text = "1.1"
+        Me.Label3.Text = "1.2"
         '
         'Label5
         '
@@ -918,6 +921,9 @@ Partial Class Form1
         'TabPage7
         '
         Me.TabPage7.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(58, Byte), Integer))
+        Me.TabPage7.Controls.Add(Me.Label25)
+        Me.TabPage7.Controls.Add(Me.Label26)
+        Me.TabPage7.Controls.Add(Me.Label27)
         Me.TabPage7.Controls.Add(Me.PictureBox12)
         Me.TabPage7.Controls.Add(Me.Label31)
         Me.TabPage7.Controls.Add(Me.ProgressBar3)
@@ -928,6 +934,40 @@ Partial Class Form1
         Me.TabPage7.Size = New System.Drawing.Size(580, 440)
         Me.TabPage7.TabIndex = 6
         Me.TabPage7.Text = "TabPage7"
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Font = New System.Drawing.Font("微软雅黑 Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label25.ForeColor = System.Drawing.Color.White
+        Me.Label25.Location = New System.Drawing.Point(340, 227)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(42, 21)
+        Me.Label25.TabIndex = 29
+        Me.Label25.Text = "解决"
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label26.Font = New System.Drawing.Font("微软雅黑 Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label26.ForeColor = System.Drawing.Color.DeepSkyBlue
+        Me.Label26.Location = New System.Drawing.Point(297, 227)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(42, 21)
+        Me.Label26.TabIndex = 28
+        Me.Label26.Text = "这里"
+        '
+        'Label27
+        '
+        Me.Label27.AutoSize = True
+        Me.Label27.Font = New System.Drawing.Font("微软雅黑 Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label27.ForeColor = System.Drawing.Color.White
+        Me.Label27.Location = New System.Drawing.Point(62, 227)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(234, 21)
+        Me.Label27.TabIndex = 27
+        Me.Label27.Text = "若安装时间超过了五分钟，点击"
         '
         'PictureBox12
         '
@@ -1081,4 +1121,7 @@ Partial Class Form1
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Button13 As Button
     Friend WithEvents Label11 As Label
+    Friend WithEvents Label25 As Label
+    Friend WithEvents Label26 As Label
+    Friend WithEvents Label27 As Label
 End Class

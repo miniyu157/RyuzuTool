@@ -721,4 +721,16 @@ Public Class Form1
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
         ChangeQQHand.ShowDialog()
     End Sub
+
+    Private Sub Label26_Click(sender As Object, e As EventArgs) Handles Label26.Click
+        Dim i As Integer
+        Dim proc As Process()
+        If System.Diagnostics.Process.GetProcessesByName("7z").Length > 0 Then
+            proc = Process.GetProcessesByName("7z")
+            For i = 0 To proc.Length - 1
+                proc(i).Kill()
+            Next
+        End If
+    End Sub
+
 End Class

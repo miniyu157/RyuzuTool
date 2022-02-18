@@ -353,4 +353,24 @@ Public Class Ryu
             My.Computer.FileSystem.RenameDirectory(ReDir, My.Computer.FileSystem.GetName(ReDir).Replace(".nca.New", ".nca"))
         Next
     End Sub
+
+    '解决！
+    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
+        Dim i As Integer
+        Dim proc As Process()
+        If System.Diagnostics.Process.GetProcessesByName("7z").Length > 0 Then
+            proc = Process.GetProcessesByName("7z")
+            For i = 0 To proc.Length - 1
+                proc(i).Kill()
+            Next
+        End If
+    End Sub
+
+    Private Sub Label5_MouseEnter(sender As Object, e As EventArgs) Handles Label5.MouseEnter
+        Label5.Font = New Font(Label5.Font.Name, Label5.Font.Size, FontStyle.Underline)
+    End Sub
+
+    Private Sub Label5_MouseLeave(sender As Object, e As EventArgs) Handles Label5.MouseLeave
+        Label5.Font = New Font(Label5.Font.Name, Label5.Font.Size, FontStyle.Regular)
+    End Sub
 End Class

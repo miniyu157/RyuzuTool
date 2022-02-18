@@ -1,36 +1,9 @@
 ﻿Public Class AboutMe
     Private Sub AboutMe_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.MaximizeBox = False
-        Me.MinimizeBox = False
-        Me.Text = " "
-        Me.ControlBox = False
-        Me.FormBorderStyle = FormBorderStyle.FixedDialog
 
-        '窗体设计器中的属性
-        'Me.ShowInTaskbar = False  （当用户从主窗体中打开"关于"对话框时不应显示任务栏中的图标）
-        'Me.Size = New Size(340, 588)
-        'PictureBox1.Location = New Point(98,20) (所有控件的位置随PictureBox1的改变而改变)
-
-
-        '设置所有图片框的显示方式
-        For Each SetAllSize In Me.Controls
-            If TypeOf SetAllSize Is PictureBox Then
-                SetAllSize.SizeMode = PictureBoxSizeMode.Zoom
-            End If
-        Next
-
-        '设置所有的图标
-        PictureBox1.Image = My.Resources.QF
-        PictureBox2.Image = My.Resources.Mail
-        PictureBox4.Image = My.Resources.QQ
-        PictureBox5.Image = My.Resources.WeChat
-
-        Button1.BackgroundImage = My.Resources.Back
-        Button1.BackgroundImageLayout = ImageLayout.Zoom
     End Sub
 
-
-    '***************************************QQ和Mail的点击事件
+#Region "QQ和Mail的点击事件"
     'QQ
     Private Sub Label5_MouseEnter(sender As Object, e As EventArgs) Handles Label5.MouseEnter
         Label5.Font = New Font(Label5.Font.Name, Label5.Font.Size, FontStyle.Underline)
@@ -47,10 +20,10 @@
     End Sub
     'Mail
     Private Sub Label3_MouseEnter(sender As Object, e As EventArgs) Handles Label3.MouseEnter
-        Label3.Font = New Font("微软雅黑 Light", Label3.Font.Size, FontStyle.Underline)
+        Label3.Font = New Font("微软雅黑", Label3.Font.Size, FontStyle.Underline)
     End Sub
     Private Sub Label3_MouseLeave(sender As Object, e As EventArgs) Handles Label3.MouseLeave
-        Label3.Font = New Font("微软雅黑 Light", Label3.Font.Size)
+        Label3.Font = New Font("微软雅黑", Label3.Font.Size, FontStyle.Regular)
     End Sub
     Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
         Try
@@ -64,9 +37,8 @@
         ChangeLogDisplay.ShowDialog()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        Me.Close()
-        Form1.Show()
+    Private Sub Form1_Closeing(sender As Object, e As EventArgs) Handles MyBase.Closing
+        ResetApp("")
     End Sub
 
     Private Sub Label9_Click(sender As Object, e As EventArgs) Handles Label9.Click
@@ -76,4 +48,19 @@
     Private Sub Label4_Click(sender As Object, e As EventArgs) Handles Label4.Click
         Shell（"explorer ""https://yuzu-emu.org/""")
     End Sub
+    Private Sub ResetApp(ByVal Arguments As String)
+        Me.Hide()
+        ReleaseManage.Hide()
+        Shell(Application.StartupPath & "\Bin\ResetApp.exe " & Arguments, Style:=AppWinStyle.Hide)
+    End Sub
+
+    Private Sub PictureBox6_Click(sender As Object, e As EventArgs) Handles PictureBox6.Click, Label12.Click
+        Shell("explorer ""https://github.com/miniyu157/RyuzuTool""")
+    End Sub
+
+    Private Sub PictureBox3_Click(sender As Object, e As EventArgs) Handles PictureBox3.Click, Label13.Click
+        Shell("explorer ""https://space.bilibili.com/1650726013""")
+    End Sub
+
+#End Region
 End Class
