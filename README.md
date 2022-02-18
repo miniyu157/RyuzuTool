@@ -3,7 +3,7 @@
 ------
 
 Switch模拟器(Yuzu/Ryujinx)的第三方安装/配置工具
-注意：当前代码为1.1
+
 ## 🕹️ Ryuzu Tool：
 
 > * 🎮 安装 Yuzu/Ryujinx 模拟器 ( 包含Yuzu主线版 Yuzu测试版/Ryujinx官方版 RyujinxLDN联机版 Ryujinx汉化版 )
