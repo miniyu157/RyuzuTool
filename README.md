@@ -27,5 +27,6 @@ Switch模拟器(Yuzu/Ryujinx)的第三方安装/配置工具
 
 浅时光° Triste 2022
 
-[📺 哔哩哔哩 - Qianshiguang233的个人空间](https://space.bilibili.com/1650726013)
-[🐧 点此加入QQ群](https://qm.qq.com/cgi-bin/qm/qr?k=CYpbVCqv2xdQaRck4IMIuzsZHPYEtN5-&jump_from=webapi)
+📺[哔哩哔哩](https://space.bilibili.com/1650726013)
+
+🐧[点此加入QQ群](https://qm.qq.com/cgi-bin/qm/qr?k=CYpbVCqv2xdQaRck4IMIuzsZHPYEtN5-&jump_from=webapi)
