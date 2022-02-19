@@ -14,7 +14,7 @@ Switch模拟器(Yuzu/Ryujinx)的第三方安装/配置工具
 > * 🕹️ 支持 Yuzu 主线版/测试版 ，Ryujinx 官方版/汉化版/LDN联机版 互转
 
 ![CRyu](https://s3.bmp.ovh/imgs/2022/02/e579db97d4876a2f.png)
-![RyuzuTool-Logo](https://s3.bmp.ovh/imgs/2022/02/00edfd080f3240f3.png)
+![RyuzuTool-Logo](https://s3.bmp.ovh/imgs/2022/02/1f7e3805734ccd41.png)
 
 可以在Github上下载最新版本的RyuzuTool，也可以使用下面的蓝奏云链接下载
 
