@@ -129,7 +129,13 @@ Public Class Form1
             Me.Location = New Point(-100, -100)
         End If
 
-        Shell(Application.StartupPath & "\Update.exe " & Application.ProductVersion, Style:=AppWinStyle.Hide)
+
+        Dim 检测更新 As New Process
+        检测更新.StartInfo.FileName = Application.StartupPath & "\Update.exe"
+        检测更新.StartInfo.Arguments = Application.ProductVersion & "-one"
+        检测更新.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
+        检测更新.Start()
+
     End Sub
 
 #Region "主界面(包括下载json/解析)(TapPage1)"

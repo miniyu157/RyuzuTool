@@ -23,14 +23,17 @@ Public Class Main
             Application.DoEvents()
         Loop
 
-        If Command() = Ver Then
-            MsgBox("暂无更新")
+        If Command().Replace("-one", "") = Ver Then
+            If InStr(Command, "-one") = 0 Then
+                MsgBox("暂无更新")
+            End If
+
             End
         Else
             Me.Hide()
 
             Form1.TextBox1.Text = Change
-            Form1.Label2.Text = Command()
+            Form1.Label2.Text = Command().Replace("-one", "")
             Form1.Label4.Text = Ver
             Form1.Label1.Tag = Link
             Form1.ShowDialog()
