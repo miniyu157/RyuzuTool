@@ -15,8 +15,14 @@
         If SetNewYuzuFolder.ShowDialog = 1 Then
             If IO.File.Exists(SetNewYuzuFolder.SelectedPath & "\ryujinx.exe") Then
                 If My.Computer.FileSystem.GetName(SetNewYuzuFolder.SelectedPath) <> "publish" Then
-                    If IO.Directory.Exists(SetNewYuzuFolder.SelectedPath & "\protable") Then
-                        MsgBox("你可能需要把protable文件夹转移到c盘，因为更新会删除Ryujinx.exe所在的文件夹")
+                    If IO.Directory.Exists(SetNewYuzuFolder.SelectedPath & "\portable") Then
+                        If MsgBox("需要把portable文件夹转移到 """ & System.Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) & "\Ryujinx"" ，我们建议你立即转移，因为以后更新会删除Ryujinx.exe所在的文件夹" & vbCrLf & vbCrLf & "选择""是""，将为你自动转移，选择""否""，则丢弃以前的存档以及数据"， 52， "数据丢失警告") = 6 Then
+                            CheckForIllegalCrossThreadCalls = False
+                            Label4.Visible = True
+                            ProgressBar1.Visible = True
+                            Dim 转移数据线程 As New Threading.Thread(AddressOf 转移数据)
+                            转移数据线程.Start()
+                        End If
                     End If
                     TextBox1.Text = SetNewYuzuFolder.SelectedPath
                     TextBox2.Text = "正在获取..."
@@ -31,6 +37,20 @@
                 ShowMessage("选择的文件夹必须包含ryujinx.exe")
             End If
         End If
+    End Sub
+    Private Sub 转移数据()
+        Button2.Enabled = False
+        Button3.Enabled = False
+
+        If IO.Directory.Exists(System.Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) & "\Ryujinx") Then
+            IO.Directory.Delete(System.Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) & "\Ryujinx", True)
+        End If
+
+        My.Computer.FileSystem.CopyDirectory(TextBox1.Text & "\portable", System.Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) & "\Ryujinx")
+
+        Label4.Text = "转移完成"
+        Button2.Enabled = True
+        Button3.Enabled = True
     End Sub
     Private Sub YuzuVerGet()
         Dim Tit = GetEXETitle(TextBox1.Text & "\ryujinx.exe", 1000).Replace(" ", "").Replace("RyujinxConsole", "")

@@ -62,5 +62,10 @@
         Shell("explorer ""https://space.bilibili.com/1650726013""")
     End Sub
 
+    '贡献人员名单
+    Private Sub Label22_Click(sender As Object, e As EventArgs) Handles Label22.Click
+        Contributors.ShowDialog()
+    End Sub
+
 #End Region
 End Class

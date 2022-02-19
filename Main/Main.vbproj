@@ -104,6 +104,12 @@
     <Compile Include="ChangeQQHand.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Contributors.Designer.vb">
+      <DependentUpon>Contributors.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Contributors.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CRyu.designer.vb">
       <DependentUpon>CRyu.vb</DependentUpon>
     </Compile>
@@ -202,6 +208,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ChangeQQHand.resx">
       <DependentUpon>ChangeQQHand.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contributors.resx">
+      <DependentUpon>Contributors.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CRyu.resx">
       <DependentUpon>CRyu.vb</DependentUpon>

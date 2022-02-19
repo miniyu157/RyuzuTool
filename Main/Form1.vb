@@ -128,6 +128,8 @@ Public Class Form1
             Me.ShowInTaskbar = False
             Me.Location = New Point(-100, -100)
         End If
+
+        Shell(Application.StartupPath & "\Update.exe " & Application.ProductVersion, Style:=AppWinStyle.Hide)
     End Sub
 
 #Region "主界面(包括下载json/解析)(TapPage1)"

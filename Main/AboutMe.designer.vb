@@ -53,6 +53,7 @@ Partial Class AboutMe
         Me.Label20 = New System.Windows.Forms.Label()
         Me.Label21 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -64,7 +65,7 @@ Partial Class AboutMe
         'PictureBox5
         '
         Me.PictureBox5.Image = Global.Main.My.Resources.Resources.WeChat
-        Me.PictureBox5.Location = New System.Drawing.Point(433, 356)
+        Me.PictureBox5.Location = New System.Drawing.Point(439, 336)
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.Size = New System.Drawing.Size(27, 27)
         Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -76,7 +77,7 @@ Partial Class AboutMe
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("微软雅黑", 9.5!)
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(478, 356)
+        Me.Label6.Location = New System.Drawing.Point(484, 336)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(96, 19)
         Me.Label6.TabIndex = 49
@@ -88,7 +89,7 @@ Partial Class AboutMe
         Me.Label5.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label5.Font = New System.Drawing.Font("微软雅黑", 9.5!)
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(478, 318)
+        Me.Label5.Location = New System.Drawing.Point(484, 298)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(153, 19)
         Me.Label5.TabIndex = 48
@@ -98,7 +99,7 @@ Partial Class AboutMe
         'PictureBox4
         '
         Me.PictureBox4.Image = Global.Main.My.Resources.Resources.QQ
-        Me.PictureBox4.Location = New System.Drawing.Point(431, 315)
+        Me.PictureBox4.Location = New System.Drawing.Point(437, 295)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(30, 30)
         Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -111,7 +112,7 @@ Partial Class AboutMe
         Me.Label3.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label3.Font = New System.Drawing.Font("微软雅黑", 9.5!)
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(478, 280)
+        Me.Label3.Location = New System.Drawing.Point(484, 260)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(141, 19)
         Me.Label3.TabIndex = 44
@@ -121,7 +122,7 @@ Partial Class AboutMe
         'PictureBox2
         '
         Me.PictureBox2.Image = Global.Main.My.Resources.Resources.Mail
-        Me.PictureBox2.Location = New System.Drawing.Point(431, 277)
+        Me.PictureBox2.Location = New System.Drawing.Point(437, 257)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(30, 30)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -133,7 +134,7 @@ Partial Class AboutMe
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("微软雅黑", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(138, 29)
+        Me.Label1.Location = New System.Drawing.Point(138, 30)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(196, 46)
         Me.Label1.TabIndex = 41
@@ -199,7 +200,7 @@ Partial Class AboutMe
         Me.Label4.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label4.Font = New System.Drawing.Font("微软雅黑", 9.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(625, 414)
+        Me.Label4.Location = New System.Drawing.Point(630, 398)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(135, 17)
         Me.Label4.TabIndex = 58
@@ -211,7 +212,7 @@ Partial Class AboutMe
         Me.Label9.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label9.Font = New System.Drawing.Font("微软雅黑", 9.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(646, 397)
+        Me.Label9.Location = New System.Drawing.Point(651, 381)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(116, 17)
         Me.Label9.TabIndex = 59
@@ -242,7 +243,7 @@ Partial Class AboutMe
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("微软雅黑 Light", 10.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.White
-        Me.Label10.Location = New System.Drawing.Point(141, 86)
+        Me.Label10.Location = New System.Drawing.Point(141, 87)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(197, 20)
         Me.Label10.TabIndex = 62
@@ -257,7 +258,7 @@ Partial Class AboutMe
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(28, 20)
         Me.Label11.TabIndex = 63
-        Me.Label11.Text = "1.2"
+        Me.Label11.Text = "1.3"
         '
         'Panel1
         '
@@ -316,7 +317,7 @@ Partial Class AboutMe
         Me.Label16.AutoSize = True
         Me.Label16.Font = New System.Drawing.Font("微软雅黑", 12.0!)
         Me.Label16.ForeColor = System.Drawing.Color.White
-        Me.Label16.Location = New System.Drawing.Point(406, 47)
+        Me.Label16.Location = New System.Drawing.Point(412, 27)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(46, 21)
         Me.Label16.TabIndex = 69
@@ -327,7 +328,7 @@ Partial Class AboutMe
         Me.Label17.AutoSize = True
         Me.Label17.Font = New System.Drawing.Font("微软雅黑", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label17.ForeColor = System.Drawing.Color.White
-        Me.Label17.Location = New System.Drawing.Point(428, 84)
+        Me.Label17.Location = New System.Drawing.Point(434, 64)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(193, 17)
         Me.Label17.TabIndex = 70
@@ -338,7 +339,7 @@ Partial Class AboutMe
         Me.Label18.AutoSize = True
         Me.Label18.Font = New System.Drawing.Font("微软雅黑", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label18.ForeColor = System.Drawing.Color.White
-        Me.Label18.Location = New System.Drawing.Point(428, 101)
+        Me.Label18.Location = New System.Drawing.Point(434, 81)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(194, 17)
         Me.Label18.TabIndex = 71
@@ -349,7 +350,7 @@ Partial Class AboutMe
         Me.Label19.AutoSize = True
         Me.Label19.Font = New System.Drawing.Font("微软雅黑", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label19.ForeColor = System.Drawing.Color.White
-        Me.Label19.Location = New System.Drawing.Point(428, 118)
+        Me.Label19.Location = New System.Drawing.Point(434, 98)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(238, 17)
         Me.Label19.TabIndex = 72
@@ -360,7 +361,7 @@ Partial Class AboutMe
         Me.Label20.AutoSize = True
         Me.Label20.Font = New System.Drawing.Font("微软雅黑", 12.0!)
         Me.Label20.ForeColor = System.Drawing.Color.White
-        Me.Label20.Location = New System.Drawing.Point(406, 156)
+        Me.Label20.Location = New System.Drawing.Point(412, 136)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(78, 21)
         Me.Label20.TabIndex = 73
@@ -371,7 +372,7 @@ Partial Class AboutMe
         Me.Label21.AutoSize = True
         Me.Label21.Font = New System.Drawing.Font("微软雅黑", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label21.ForeColor = System.Drawing.Color.White
-        Me.Label21.Location = New System.Drawing.Point(428, 196)
+        Me.Label21.Location = New System.Drawing.Point(434, 176)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(157, 17)
         Me.Label21.TabIndex = 74
@@ -382,11 +383,23 @@ Partial Class AboutMe
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("微软雅黑", 12.0!)
         Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(406, 235)
+        Me.Label7.Location = New System.Drawing.Point(412, 215)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(62, 21)
         Me.Label7.TabIndex = 75
         Me.Label7.Text = "联系我:"
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label22.Font = New System.Drawing.Font("微软雅黑", 9.0!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label22.ForeColor = System.Drawing.Color.White
+        Me.Label22.Location = New System.Drawing.Point(413, 398)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(80, 17)
+        Me.Label22.TabIndex = 76
+        Me.Label22.Text = "贡献人员名单"
         '
         'AboutMe
         '
@@ -394,6 +407,7 @@ Partial Class AboutMe
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(58, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(783, 448)
+        Me.Controls.Add(Me.Label22)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label21)
         Me.Controls.Add(Me.Label20)
@@ -470,4 +484,5 @@ Partial Class AboutMe
     Friend WithEvents Label20 As Label
     Friend WithEvents Label21 As Label
     Friend WithEvents Label7 As Label
+    Friend WithEvents Label22 As Label
 End Class

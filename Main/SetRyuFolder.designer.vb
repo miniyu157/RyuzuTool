@@ -31,6 +31,7 @@ Partial Class SetRyuFolder
         Me.Label2 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
@@ -143,16 +144,27 @@ Partial Class SetRyuFolder
         Me.Label1.TabIndex = 9
         Me.Label1.Text = "工作目录："
         '
+        'ProgressBar1
+        '
+        Me.ProgressBar1.Location = New System.Drawing.Point(27, 323)
+        Me.ProgressBar1.MarqueeAnimationSpeed = 10
+        Me.ProgressBar1.Name = "ProgressBar1"
+        Me.ProgressBar1.Size = New System.Drawing.Size(493, 8)
+        Me.ProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee
+        Me.ProgressBar1.TabIndex = 18
+        Me.ProgressBar1.Visible = False
+        '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("微软雅黑", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label4.Font = New System.Drawing.Font("微软雅黑 Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(25, 292)
+        Me.Label4.Location = New System.Drawing.Point(23, 292)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(284, 21)
-        Me.Label4.TabIndex = 18
-        Me.Label4.Text = "*可能需要把protable文件夹转移到C盘"
+        Me.Label4.Size = New System.Drawing.Size(166, 21)
+        Me.Label4.TabIndex = 19
+        Me.Label4.Text = "正在转移数据文件夹..."
+        Me.Label4.Visible = False
         '
         'SetRyuFolder
         '
@@ -161,6 +173,7 @@ Partial Class SetRyuFolder
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(58, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(800, 368)
         Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.ProgressBar1)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.TextBox3)
@@ -188,5 +201,6 @@ Partial Class SetRyuFolder
     Friend WithEvents Label2 As Label
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents Label1 As Label
+    Friend WithEvents ProgressBar1 As ProgressBar
     Friend WithEvents Label4 As Label
 End Class

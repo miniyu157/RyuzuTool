@@ -10,6 +10,15 @@ Public Class Form1
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim i As Integer
+        Dim proc As Process()
+        If System.Diagnostics.Process.GetProcessesByName("RyuzuTool").Length > 0 Then
+            proc = Process.GetProcessesByName("RyuzuTool")
+            For i = 0 To proc.Length - 1
+                proc(i).Kill()
+            Next
+        End If
+
         Button1.Enabled = False
         Label5.Visible = True
         ProgressBar1.Visible = True

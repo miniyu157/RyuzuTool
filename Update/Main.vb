@@ -53,7 +53,7 @@ Public Class Main
 #Region "获取版本信息"
     Function GetChange()
         Dim wc As New HtmlWeb
-        Dim doc As HtmlDocument = wc.Load("https://gitee.com/QianTime/software-update/blob/master/ChangeLog.txt")
+        Dim doc As HtmlDocument = wc.Load("https://gitee.com/QianTime/software-update/blob/master/UpdateInfo.txt")
         Dim rootNode As HtmlNode = doc.DocumentNode
         Dim xPathStr As String = "/"
         Dim a As String
@@ -73,7 +73,7 @@ Public Class Main
 
     Function GetVer()
         Dim wc As New HtmlWeb
-        Dim doc As HtmlDocument = wc.Load("https://gitee.com/QianTime/software-update/blob/master/Ver.txt")
+        Dim doc As HtmlDocument = wc.Load("https://gitee.com/QianTime/software-update/blob/master/UpdateInfo.txt")
         Dim rootNode As HtmlNode = doc.DocumentNode
         Dim xPathStr As String = "/"
         Dim a As String
@@ -92,7 +92,7 @@ Public Class Main
 
     Function GetLink()
         Dim wc As New HtmlWeb
-        Dim doc As HtmlDocument = wc.Load("https://gitee.com/QianTime/software-update/blob/master/NewLink.txt")
+        Dim doc As HtmlDocument = wc.Load("https://gitee.com/QianTime/software-update/blob/master/UpdateInfo.txt")
         Dim rootNode As HtmlNode = doc.DocumentNode
         Dim xPathStr As String = "/"
         Dim a As String
