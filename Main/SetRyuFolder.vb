@@ -92,6 +92,7 @@
         OpenYuzu.SetValue("InstallFolder", TextBox1.Text)
         OpenYuzu.SetValue("Version", TextBox2.Text)
         OpenYuzu.SetValue("Firmver", TextBox3.Text)
+        OpenYuzu.SetValue("MCL", "EN")
 
         ShowMessage("修改成功，重启程序生效")
         Dim ResetTool = New Process

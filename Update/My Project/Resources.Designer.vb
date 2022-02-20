@@ -61,6 +61,15 @@ Namespace My.Resources
         End Property
         
         '''<summary>
+        '''  查找类似 https://gitee.com/QianTime/software-update/blob/master/UpdateInfo.txt 的本地化字符串。
+        '''</summary>
+        Friend ReadOnly Property Source() As String
+            Get
+                Return ResourceManager.GetString("Source", resourceCulture)
+            End Get
+        End Property
+        
+        '''<summary>
         '''  查找 System.Drawing.Bitmap 类型的本地化资源。
         '''</summary>
         Friend ReadOnly Property update() As System.Drawing.Bitmap

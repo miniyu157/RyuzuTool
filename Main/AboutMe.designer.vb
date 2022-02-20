@@ -176,7 +176,7 @@ Partial Class AboutMe
         Me.LinkLabel1.Font = New System.Drawing.Font("微软雅黑", 10.5!)
         Me.LinkLabel1.ForeColor = System.Drawing.SystemColors.ActiveCaption
         Me.LinkLabel1.LinkColor = System.Drawing.Color.LightSkyBlue
-        Me.LinkLabel1.Location = New System.Drawing.Point(166, 164)
+        Me.LinkLabel1.Location = New System.Drawing.Point(166, 162)
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.Size = New System.Drawing.Size(65, 20)
         Me.LinkLabel1.TabIndex = 55
@@ -254,11 +254,11 @@ Partial Class AboutMe
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("微软雅黑", 10.5!)
         Me.Label11.ForeColor = System.Drawing.Color.White
-        Me.Label11.Location = New System.Drawing.Point(135, 164)
+        Me.Label11.Location = New System.Drawing.Point(135, 162)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(28, 20)
         Me.Label11.TabIndex = 63
-        Me.Label11.Text = "1.3"
+        Me.Label11.Text = "1.4"
         '
         'Panel1
         '

@@ -55,7 +55,7 @@ Public Class Form1
         Directory.Delete(Application.StartupPath & "\Bin", True)
 
         For Each 删除旧的 In My.Computer.FileSystem.GetFiles(Application.StartupPath & "\")
-            If My.Computer.FileSystem.GetName(删除旧的) <> "Update.exe" And My.Computer.FileSystem.GetName(删除旧的) <> "HtmlAgilityPack.dll" Then
+            If My.Computer.FileSystem.GetName(删除旧的) <> "Update.exe" Then
                 File.Delete(删除旧的)
             End If
         Next
@@ -63,7 +63,7 @@ Public Class Form1
         My.Computer.FileSystem.CopyDirectory(Application.StartupPath & "\Tool\Bin", Application.StartupPath & "\Bin")
 
         For Each 复制新的 In My.Computer.FileSystem.GetFiles(Application.StartupPath & "\Tool\")
-            If My.Computer.FileSystem.GetName(复制新的) <> "Update.exe" And My.Computer.FileSystem.GetName(复制新的) <> "HtmlAgilityPack.dll" Then
+            If My.Computer.FileSystem.GetName(复制新的) <> "Update.exe" Then
                 File.Copy(复制新的, Application.StartupPath & "\" & My.Computer.FileSystem.GetName(复制新的))
             End If
         Next

@@ -1,27 +1,36 @@
-﻿Imports HtmlAgilityPack
+﻿Imports System.IO
 
 Public Class Main
-    Dim Prog As Boolean
-
     Dim Change As String
     Dim Ver As String
     Dim Link As String
     Private Sub Main_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Prog = False
-
         CheckForIllegalCrossThreadCalls = False
 
-        Dim 更新日志线程 As New Threading.Thread(AddressOf 更新日志)
-        更新日志线程.Start()
-
-        Dim 检查更新线程 As New Threading.Thread(AddressOf 检查更新)
-        检查更新线程.Start()
+        Dim 下载配置文件线程 As New Threading.Thread(AddressOf 下载配置文件)
+        下载配置文件线程.Start()
     End Sub
-    Private Sub 检查更新()
-        Do Until Prog = True
-            Threading.Thread.Sleep(50)
-            Application.DoEvents()
-        Loop
+
+    Private Sub Form1_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        End
+    End Sub
+
+
+    Private Sub 下载配置文件()
+        If File.Exists(Application.StartupPath & "\UpdateInfo.txt") Then File.Delete(Application.StartupPath & "\UpdateInfo.txt")
+        My.Computer.Network.DownloadFile(My.Resources.Source, Application.StartupPath & "\UpdateInfo.txt")
+
+
+        Dim 全部内容 As String = File.ReadAllText(Application.StartupPath & "\UpdateInfo.txt")
+        '获取更新日志
+        Change = "- " & 提取中间文本(全部内容, "Ry更新日志开始", "Ry更新日志结束").Replace("(crlf)", vbCrLf & "- ")
+        '获取更新链接
+        Link = 提取中间文本(全部内容, "Ry更新链接开始", "Ry更新链接结束").Replace(";", "&")
+        '获取新版本号
+        Ver = 提取中间文本(全部内容, "Ry爬取版本号开始", "Ry爬取版本号结束")
+
+
+        If File.Exists(Application.StartupPath & "\UpdateInfo.txt") Then File.Delete(Application.StartupPath & "\UpdateInfo.txt")
 
         If Command().Replace("-one", "") = Ver Then
             If InStr(Command, "-one") = 0 Then
@@ -38,80 +47,11 @@ Public Class Main
             Form1.Label1.Tag = Link
             Form1.ShowDialog()
         End If
-
-    End Sub
-    Private Sub 更新日志()
-        Change = GetChange()
-        Ver = GetVer()
-        Link = GetLink()
-
-        Prog = True
     End Sub
 
-    Private Sub Form1_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
-        End
-    End Sub
-
-
-#Region "获取版本信息"
-    Function GetChange()
-        Dim wc As New HtmlWeb
-        Dim doc As HtmlDocument = wc.Load("https://gitee.com/QianTime/software-update/blob/master/UpdateInfo.txt")
-        Dim rootNode As HtmlNode = doc.DocumentNode
-        Dim xPathStr As String = "/"
-        Dim a As String
-
-        Dim Test As HtmlNodeCollection = rootNode.SelectNodes(xPathStr)
-        For Each Node As HtmlNode In Test
-            a = Node.InnerHtml
-        Next
-
-#Disable Warning BC42104 ' 在为变量赋值之前，变量已被使用
-        Dim StartNum = InStr(a, "Ry更新日志开始") + 7
-        Dim StrLen = InStr(a, "Ry更新日志结束") - StartNum - 1
-
-        GetChange = " - " & a.Substring(StartNum, StrLen).Replace("(crlf)", vbCrLf & " - ")
-#Enable Warning BC42104 ' 在为变量赋值之前，变量已被使用
+    Function 提取中间文本(ByVal 源文本 As String, ByVal 前导文本 As String, 结束文本 As String) As String
+        Dim 起始位置 = InStr(源文本, 前导文本) + Len(前导文本) - 1
+        Dim 目标文本长度 = InStr(源文本, 结束文本) - 起始位置 - 1
+        提取中间文本 = 源文本.Substring(起始位置, 目标文本长度)
     End Function
-
-    Function GetVer()
-        Dim wc As New HtmlWeb
-        Dim doc As HtmlDocument = wc.Load("https://gitee.com/QianTime/software-update/blob/master/UpdateInfo.txt")
-        Dim rootNode As HtmlNode = doc.DocumentNode
-        Dim xPathStr As String = "/"
-        Dim a As String
-
-        Dim Test As HtmlNodeCollection = rootNode.SelectNodes(xPathStr)
-        For Each Node As HtmlNode In Test
-            a = Node.InnerHtml
-        Next
-
-#Disable Warning BC42104 ' 在为变量赋值之前，变量已被使用
-        Dim StartNum = InStr(a, "Ry爬取版本号开始") + 8
-        Dim StrLen = InStr(a, "Ry爬取版本号结束") - StartNum - 1
-        GetVer = a.Substring(StartNum, StrLen)
-#Enable Warning BC42104 ' 在为变量赋值之前，变量已被使用
-    End Function
-
-    Function GetLink()
-        Dim wc As New HtmlWeb
-        Dim doc As HtmlDocument = wc.Load("https://gitee.com/QianTime/software-update/blob/master/UpdateInfo.txt")
-        Dim rootNode As HtmlNode = doc.DocumentNode
-        Dim xPathStr As String = "/"
-        Dim a As String
-
-        Dim Test As HtmlNodeCollection = rootNode.SelectNodes(xPathStr)
-        For Each Node As HtmlNode In Test
-            a = Node.InnerHtml
-        Next
-
-#Disable Warning BC42104 ' 在为变量赋值之前，变量已被使用
-        Dim StartNum = InStr(a, "Ry更新链接开始") + 7
-        Dim StrLen = InStr(a, "Ry更新链接结束") - StartNum - 1
-        GetLink = a.Substring(StartNum, StrLen).Replace(";", "&")
-#Enable Warning BC42104 ' 在为变量赋值之前，变量已被使用
-
-    End Function
-
-#End Region
 End Class

@@ -104,9 +104,6 @@ Public Class Form1
             key1.OpenSubKey("RyuzuTool", True).OpenSubKey("Ryujinx", True).SetValue("Insted", "None")
         End If
 
-        If My.Computer.Registry.CurrentUser.OpenSubKey("SOFTWARE", True).OpenSubKey("RyuzuTool", True).GetValue("TabIndex") Is Nothing Then
-            My.Computer.Registry.CurrentUser.OpenSubKey("SOFTWARE", True).OpenSubKey("RyuzuTool", True).SetValue("TabIndex", "0")
-        End If
 #End Region
         LoadVerlist = "No" '表示没有下载json，用于下一行代码
         MaterialCheckBox1.CheckState = CheckState.Checked
@@ -129,13 +126,19 @@ Public Class Form1
             Me.Location = New Point(-100, -100)
         End If
 
-
+        CheckForIllegalCrossThreadCalls = False
+        Button17.Enabled = False
+        Dim 检测更新线程 As New Threading.Thread(AddressOf 检测更新)
+        检测更新线程.Start()
+    End Sub
+    Private Sub 检测更新()
         Dim 检测更新 As New Process
         检测更新.StartInfo.FileName = Application.StartupPath & "\Update.exe"
         检测更新.StartInfo.Arguments = Application.ProductVersion & "-one"
         检测更新.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
         检测更新.Start()
-
+        检测更新.WaitForExit()
+        Button17.Enabled = True
     End Sub
 
 #Region "主界面(包括下载json/解析)(TapPage1)"

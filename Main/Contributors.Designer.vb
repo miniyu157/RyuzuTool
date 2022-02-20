@@ -33,10 +33,11 @@ Partial Class Contributors
         Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.TextBox1.Font = New System.Drawing.Font("微软雅黑", 10.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.TextBox1.ForeColor = System.Drawing.Color.White
-        Me.TextBox1.Location = New System.Drawing.Point(12, 12)
+        Me.TextBox1.Location = New System.Drawing.Point(29, 13)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(406, 160)
+        Me.TextBox1.ReadOnly = True
+        Me.TextBox1.Size = New System.Drawing.Size(375, 160)
         Me.TextBox1.TabIndex = 0
         Me.TextBox1.Text = "正在加载..."
         '
@@ -44,7 +45,7 @@ Partial Class Contributors
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("微软雅黑", 10.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.Label1.Location = New System.Drawing.Point(21, 181)
+        Me.Label1.Location = New System.Drawing.Point(25, 182)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(317, 20)
         Me.Label1.TabIndex = 1
@@ -56,7 +57,7 @@ Partial Class Contributors
         Me.Label2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label2.Font = New System.Drawing.Font("微软雅黑", 10.5!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.LightGray
-        Me.Label2.Location = New System.Drawing.Point(335, 181)
+        Me.Label2.Location = New System.Drawing.Point(339, 182)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(65, 20)
         Me.Label2.TabIndex = 2

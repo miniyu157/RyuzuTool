@@ -12,7 +12,7 @@ Public Class Contributors
             If IO.File.Exists(Application.StartupPath & "\Contributors.txt") Then
                 IO.File.Delete(Application.StartupPath & "\Contributors.txt")
             End If
-            My.Computer.Network.DownloadFile("https://gitee.com/QianTime/software-update/blob/master/UpdateInfo.txt", Application.StartupPath & "\Contributors.txt")
+            My.Computer.Network.DownloadFile(My.Resources.Source, Application.StartupPath & "\Contributors.txt")
             TextBox1.Text = 读取文本文件(Application.StartupPath & "\Contributors.txt").提取中间文本("Ry贡献人员名单开始", "Ry贡献人员名单结束").Replace("(crlf)", vbCrLf)
             If IO.File.Exists(Application.StartupPath & "\Contributors.txt") Then
                 IO.File.Delete(Application.StartupPath & "\Contributors.txt")

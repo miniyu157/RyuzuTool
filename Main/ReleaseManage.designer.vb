@@ -55,11 +55,11 @@ Partial Class ReleaseManage
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
         Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label16 = New System.Windows.Forms.Label()
         Me.MaterialTabSelector1 = New MaterialSkin.Controls.MaterialTabSelector()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Button13 = New System.Windows.Forms.Button()
         Me.MaterialTabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -491,6 +491,18 @@ Partial Class ReleaseManage
         Me.Label14.TabIndex = 2
         Me.Label14.Text = "0.0.00"
         '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label16.Font = New System.Drawing.Font("微软雅黑", 10.5!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label16.ForeColor = System.Drawing.Color.White
+        Me.Label16.Location = New System.Drawing.Point(55, 363)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(173, 20)
+        Me.Label16.TabIndex = 11
+        Me.Label16.Text = "Mod下载(yuzu-emu.org)"
+        '
         'MaterialTabSelector1
         '
         Me.MaterialTabSelector1.BaseTabControl = Me.MaterialTabControl1
@@ -534,27 +546,13 @@ Partial Class ReleaseManage
         Me.Panel1.Size = New System.Drawing.Size(32, 60)
         Me.Panel1.TabIndex = 5
         '
-        'Button13
-        '
-        Me.Button13.FlatAppearance.BorderColor = System.Drawing.Color.Gray
-        Me.Button13.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(58, Byte), Integer))
-        Me.Button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button13.Font = New System.Drawing.Font("Microsoft YaHei UI", 10.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.Button13.ForeColor = System.Drawing.Color.White
-        Me.Button13.Location = New System.Drawing.Point(635, 473)
-        Me.Button13.Name = "Button13"
-        Me.Button13.Size = New System.Drawing.Size(140, 35)
-        Me.Button13.TabIndex = 6
-        Me.Button13.Text = "启动时打开 : Yuzu"
-        Me.Button13.UseVisualStyleBackColor = True
-        '
         'ReleaseManage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(58, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(814, 534)
-        Me.Controls.Add(Me.Button13)
+        Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Label1)
@@ -614,5 +612,5 @@ Partial Class ReleaseManage
     Friend WithEvents Label13 As Label
     Friend WithEvents Label14 As Label
     Friend WithEvents Label15 As Label
-    Friend WithEvents Button13 As Button
+    Friend WithEvents Label16 As Label
 End Class

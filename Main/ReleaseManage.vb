@@ -48,12 +48,6 @@ Public Class ReleaseManage
             Panel2.Visible = False
         End If
 
-        If My.Computer.Registry.CurrentUser.OpenSubKey("SOFTWARE", True).OpenSubKey("RyuzuTool", True).GetValue("TabIndex") = 1 Then
-            MaterialTabControl1.SelectedIndex = 1
-            Button13.Text = "启动时打开 : Ryu"
-        End If
-
-
         'Ryujinx
         Dim OpenRyu = My.Computer.Registry.CurrentUser.OpenSubKey("SOFTWARE", True).OpenSubKey("RyuzuTool", True).OpenSubKey("Ryujinx", True)
         If Directory.Exists(OpenRyu.GetValue("InstallFolder")) Then '是否已安装
@@ -82,17 +76,15 @@ Public Class ReleaseManage
             GroupBox2.Text = "安装状态：未安装"
         End If
 
-
-
-    End Sub
-    '切换启动页
-    Private Sub Button13_Click(sender As Object, e As EventArgs) Handles Button13.Click
-        If My.Computer.Registry.CurrentUser.OpenSubKey("SOFTWARE", True).OpenSubKey("RyuzuTool", True).GetValue("TabIndex") = "1" Then
-            My.Computer.Registry.CurrentUser.OpenSubKey("SOFTWARE", True).OpenSubKey("RyuzuTool", True).SetValue("TabIndex", "0")
-            Button13.Text = "启动时打开 : Yuzu"
-        ElseIf My.Computer.Registry.CurrentUser.OpenSubKey("SOFTWARE", True).OpenSubKey("RyuzuTool", True).GetValue("TabIndex") = "0" Then
-            My.Computer.Registry.CurrentUser.OpenSubKey("SOFTWARE", True).OpenSubKey("RyuzuTool", True).SetValue("TabIndex", "1")
-            Button13.Text = "启动时打开 : Ryu"
+        If Directory.Exists(OpenYuzu.GetValue("InstallFolder")) = False Then
+            MaterialTabControl1.SelectedIndex = 1
+            If Directory.Exists(OpenRyu.GetValue("InstallFolder")) = False Then
+                MaterialTabControl1.SelectedIndex = 0
+            End If
+        Else
+            If Directory.Exists(OpenRyu.GetValue("InstallFolder")) = False Then
+                MaterialTabControl1.SelectedIndex = 0
+            End If
         End If
     End Sub
 
@@ -411,5 +403,13 @@ Public Class ReleaseManage
     Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
         SetRyuFolder.ShowDialog()
     End Sub
+    '下载mod
+    Private Sub Label16_Click(sender As Object, e As EventArgs) Handles Label16.Click
+        开网页("https://yuzu-emu.org/wiki/switch-mods/")
+    End Sub
 #End Region
+    Private Sub 开网页(ByVal URL As String)
+        Shell("explorer """ & URL & """")
+    End Sub
+
 End Class
