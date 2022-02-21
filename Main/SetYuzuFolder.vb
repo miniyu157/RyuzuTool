@@ -35,30 +35,25 @@ Public Class SetYuzuFolder
         End If
     End Sub
     Private Sub YuzuVerGet()
-        Dim Tit = GetEXETitle(TextBox1.Text & "\yuzu.exe", 1000).Replace("yuzu Early Access", "").Replace("yuzu", "").Replace(" ", "")
-        If Tit = "" Then
-            TextBox2.Text = "失败：第一次重试"
-            Tit = GetEXETitle(TextBox1.Text & "\yuzu.exe", 1500).Replace("yuzu Early Access", "").Replace("yuzu", "").Replace(" ", "")
-            If Tit = "" Then
-                TextBox2.Text = "失败：第二次重试"
-                Tit = GetEXETitle(TextBox1.Text & "\yuzu.exe", 2000).Replace("yuzu Early Access", "").Replace("yuzu", "").Replace(" ", "")
-                If Tit = "" Then
-                    TextBox2.Text = "失败：第三次重试"
-                    Tit = GetEXETitle(TextBox1.Text & "\yuzu.exe", 3000).Replace("yuzu Early Access", "").Replace("yuzu", "").Replace(" ", "")
-                    If Tit = "" Then
-                        TextBox2.Text = "未知"
-                    Else
-                        TextBox2.Text = Tit
-                    End If
-                Else
-                    TextBox2.Text = Tit
-                End If
-            Else
-                TextBox2.Text = Tit
-            End If
-        Else
-            TextBox2.Text = Tit
-        End If
+
+        Dim NewProcess = New Process
+        With NewProcess.StartInfo
+            .FileName = TextBox1.Text & "\yuzu.exe"
+            .WindowStyle = ProcessWindowStyle.Minimized
+        End With
+
+        NewProcess.Start()
+
+        Dim YuzuTitle = ""
+        Do Until YuzuTitle <> ""
+            Threading.Thread.Sleep(50)
+            YuzuTitle = Process.GetProcessById(NewProcess.Id).MainWindowTitle.ToString
+        Loop
+
+        TextBox2.Text = YuzuTitle.Replace("yuzu Early Access", "").Replace("yuzu", "").Replace(" ", "")
+
+        NewProcess.Kill()
+
     End Sub
     Private Sub ShowMessage(ByVal Text As String)
         ShowMessageBox.Label1.Text = Text
@@ -84,15 +79,4 @@ Public Class SetYuzuFolder
         ResetTool.Start()
     End Sub
 
-    Function GetEXETitle(ByVal FileName As String, ByVal Waiting As Integer) As String
-        Dim NewProcess = New Process
-        NewProcess.StartInfo.FileName = FileName
-        NewProcess.StartInfo.WindowStyle = ProcessWindowStyle.Minimized
-        NewProcess.Start()
-        NewProcess.WaitForInputIdle()
-        Threading.Thread.Sleep(Waiting)
-        GetEXETitle = NewProcess.MainWindowTitle
-        Threading.Thread.Sleep(Waiting)
-        NewProcess.Kill()
-    End Function
 End Class

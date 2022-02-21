@@ -84,7 +84,7 @@ Public Class Ryu
     Dim prod_key As String
     Dim InstallFolder As String
     'Next（赋值）
-    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click, PictureBox6.Click
+    Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
         If MaterialRadioButton1.Checked = True Then
             Dim a = File.ReadLines(Application.StartupPath & "\EN.json")
             RyuLink = "https://" & My.Resources.MirrorSource & "/ns_emu_helper/RyujinxMainlineMirror/" & a(ComboBox1.SelectedIndex)
@@ -113,7 +113,7 @@ Public Class Ryu
     End Sub
 
     'Back(重启软件)
-    Private Sub ResetAppOrCloseWindow(sender As Object, e As EventArgs) Handles Button5.Click, PictureBox4.Click, MyBase.FormClosing
+    Private Sub ResetAppOrCloseWindow(sender As Object, e As EventArgs) Handles Button5.Click, MyBase.FormClosing
         Shell(Application.StartupPath & "\Bin\ResetApp.exe", Style:=AppWinStyle.Hide)
     End Sub
 
@@ -145,37 +145,21 @@ Public Class Ryu
     End Sub
 #End Region
 
-#Region "Label3 - Ryujinx官网"
-    Private Sub Label3_MouseEnter(sender As Object, e As EventArgs) Handles Label3.MouseEnter
-        Label3.ForeColor = Color.White
-        Label3.Font = New Font(Label3.Font.Name, Label3.Font.Size, style:=FontStyle.Underline)
-    End Sub
-
-    Private Sub Label3_MouseLeave(sender As Object, e As EventArgs) Handles Label3.MouseLeave
-        Label3.ForeColor = Color.FromArgb(47, 143, 240)
-        Label3.Font = New Font(Label3.Font.Name, Label3.Font.Size, style:=FontStyle.Regular)
-    End Sub
-
-    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
-        Shell("explorer https://ryujinx.org/")
-    End Sub
-#End Region
-
 #Region "版本选择的按钮"
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click, PictureBox13.Click
         MaterialRadioButton1.Checked = True
         Label1.Text = My.Resources.官方版
-        ComboBox1.Location = New Point(409, 150)
+        ComboBox1.Location = New Point(395, 132)
     End Sub
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click, PictureBox9.Click
         MaterialRadioButton2.Checked = True
         Label1.Text = My.Resources.汉化版
-        ComboBox1.Location = New Point(409, 217)
+        ComboBox1.Location = New Point(395, 198)
     End Sub
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click, PictureBox6.Click
         MaterialRadioButton3.Checked = True
         Label1.Text = My.Resources.联机版
-        ComboBox1.Location = New Point(409, 285)
+        ComboBox1.Location = New Point(395, 264)
     End Sub
 #End Region
 
@@ -373,4 +357,9 @@ Public Class Ryu
     Private Sub Label5_MouseLeave(sender As Object, e As EventArgs) Handles Label5.MouseLeave
         Label5.Font = New Font(Label5.Font.Name, Label5.Font.Size, FontStyle.Regular)
     End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+        Shell("explorer https://ryujinx.org/")
+    End Sub
+
 End Class

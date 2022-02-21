@@ -1,6 +1,6 @@
 ﻿Public Class AboutMe
     Private Sub AboutMe_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
+        Label11.Text = Application.ProductVersion
     End Sub
 
 #Region "QQ和Mail的点击事件"

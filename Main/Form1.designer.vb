@@ -239,7 +239,7 @@ Partial Class Form1
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(28, 17)
         Me.Label3.TabIndex = 63
-        Me.Label3.Text = "1.4"
+        Me.Label3.Text = "0.0"
         '
         'Label5
         '
@@ -415,7 +415,7 @@ Partial Class Form1
         '
         Me.Label2.AutoSize = True
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(202, 83)
+        Me.Label2.Location = New System.Drawing.Point(202, 78)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(125, 12)
         Me.Label2.TabIndex = 20
@@ -448,7 +448,7 @@ Partial Class Form1
         '
         'PictureBox5
         '
-        Me.PictureBox5.Location = New System.Drawing.Point(330, 47)
+        Me.PictureBox5.Location = New System.Drawing.Point(330, 42)
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.Size = New System.Drawing.Size(189, 62)
         Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -460,7 +460,7 @@ Partial Class Form1
         Me.MaterialCheckBox2.AutoSize = True
         Me.MaterialCheckBox2.Depth = 0
         Me.MaterialCheckBox2.Font = New System.Drawing.Font("Roboto", 10.0!)
-        Me.MaterialCheckBox2.Location = New System.Drawing.Point(95, 243)
+        Me.MaterialCheckBox2.Location = New System.Drawing.Point(95, 221)
         Me.MaterialCheckBox2.Margin = New System.Windows.Forms.Padding(0)
         Me.MaterialCheckBox2.MouseLocation = New System.Drawing.Point(-1, -1)
         Me.MaterialCheckBox2.MouseState = MaterialSkin.MouseState.HOVER
@@ -475,7 +475,7 @@ Partial Class Form1
         Me.MaterialCheckBox1.AutoSize = True
         Me.MaterialCheckBox1.Depth = 0
         Me.MaterialCheckBox1.Font = New System.Drawing.Font("Roboto", 10.0!)
-        Me.MaterialCheckBox1.Location = New System.Drawing.Point(95, 176)
+        Me.MaterialCheckBox1.Location = New System.Drawing.Point(95, 154)
         Me.MaterialCheckBox1.Margin = New System.Windows.Forms.Padding(0)
         Me.MaterialCheckBox1.MouseLocation = New System.Drawing.Point(-1, -1)
         Me.MaterialCheckBox1.MouseState = MaterialSkin.MouseState.HOVER
@@ -523,11 +523,12 @@ Partial Class Form1
         'Button5
         '
         Me.Button5.FlatAppearance.BorderColor = System.Drawing.Color.Gray
+        Me.Button5.FlatAppearance.BorderSize = 0
         Me.Button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(58, Byte), Integer))
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button5.Font = New System.Drawing.Font("微软雅黑 Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Button5.ForeColor = System.Drawing.Color.White
-        Me.Button5.Location = New System.Drawing.Point(-9, 230)
+        Me.Button5.Location = New System.Drawing.Point(-9, 208)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(593, 51)
         Me.Button5.TabIndex = 10
@@ -539,7 +540,7 @@ Partial Class Form1
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("微软雅黑", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(58, 37)
+        Me.Label9.Location = New System.Drawing.Point(58, 32)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(230, 46)
         Me.Label9.TabIndex = 9
@@ -548,11 +549,12 @@ Partial Class Form1
         'Button6
         '
         Me.Button6.FlatAppearance.BorderColor = System.Drawing.Color.Gray
+        Me.Button6.FlatAppearance.BorderSize = 0
         Me.Button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(58, Byte), Integer))
         Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button6.Font = New System.Drawing.Font("微软雅黑 Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Button6.ForeColor = System.Drawing.Color.White
-        Me.Button6.Location = New System.Drawing.Point(-9, 163)
+        Me.Button6.Location = New System.Drawing.Point(-9, 141)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(593, 51)
         Me.Button6.TabIndex = 8
@@ -564,7 +566,7 @@ Partial Class Form1
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("微软雅黑 Light", 12.0!)
         Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(65, 99)
+        Me.Label8.Location = New System.Drawing.Point(65, 94)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(138, 21)
         Me.Label8.TabIndex = 23

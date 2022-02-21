@@ -51,7 +51,7 @@ Partial Class Form1
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("微软雅黑", 21.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(216, 21)
+        Me.Label2.Location = New System.Drawing.Point(214, 21)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(58, 38)
         Me.Label2.TabIndex = 1
@@ -172,7 +172,7 @@ Partial Class Form1
         Me.MinimizeBox = False
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Update"
+        Me.Text = "Ryuzu Tool - 更新"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()

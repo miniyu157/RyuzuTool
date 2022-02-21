@@ -42,8 +42,15 @@ Public Class Form1
 
         Label5.Text = "正在安装..."
 
-        File.Copy(Application.StartupPath & "\Bin\7z.exe", Application.StartupPath & "\7z.exe")
-        File.Copy(Application.StartupPath & "\Bin\7z.dll", Application.StartupPath & "\7z.dll")
+        Try
+            File.Copy(Application.StartupPath & "\Bin\7z.exe", Application.StartupPath & "\7z.exe")
+            File.Copy(Application.StartupPath & "\Bin\7z.dll", Application.StartupPath & "\7z.dll")
+        Catch ex As Exception
+            If File.Exists(Application.StartupPath & "\RyuzuTool.zip") Then File.Delete(Application.StartupPath & "\RyuzuTool.zip")
+            My.Computer.FileSystem.RenameFile(Application.StartupPath & "\Tool.zip", "RyuzuTool.zip")
+            MsgBox("缺少 \Bin\7z.exe 或 \Bin\7z.dll , 请手动解压 \RyuzuTool.zip 至任意目录", 4112, "错误 - 文件缺失")
+            End
+        End Try
 
         Dim 解压zip As New Process
         解压zip.StartInfo.FileName = Application.StartupPath & "\7z.exe"
@@ -82,5 +89,9 @@ Public Class Form1
         Shell(Application.StartupPath & "\Update.bat")
 
         End
+    End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        TextBox1.Select(0, 0)
     End Sub
 End Class

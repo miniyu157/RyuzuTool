@@ -35,7 +35,7 @@ Public Class Form1
             End If
         Next
 
-
+        Label3.Text = Application.ProductVersion
         Label4.Font = New Font("Century Gothic", 24)
 
 

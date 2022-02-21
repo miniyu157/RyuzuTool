@@ -476,9 +476,9 @@ Partial Class ReleaseManage
         Me.Label15.ForeColor = System.Drawing.Color.White
         Me.Label15.Location = New System.Drawing.Point(119, 43)
         Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(88, 25)
+        Me.Label15.Size = New System.Drawing.Size(69, 25)
         Me.Label15.TabIndex = 1
-        Me.Label15.Text = "未知版本"
+        Me.Label15.Text = "未知版"
         '
         'Label14
         '

@@ -176,7 +176,7 @@ Partial Class AboutMe
         Me.LinkLabel1.Font = New System.Drawing.Font("微软雅黑", 10.5!)
         Me.LinkLabel1.ForeColor = System.Drawing.SystemColors.ActiveCaption
         Me.LinkLabel1.LinkColor = System.Drawing.Color.LightSkyBlue
-        Me.LinkLabel1.Location = New System.Drawing.Point(166, 162)
+        Me.LinkLabel1.Location = New System.Drawing.Point(167, 162)
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.Size = New System.Drawing.Size(65, 20)
         Me.LinkLabel1.TabIndex = 55
@@ -188,7 +188,7 @@ Partial Class AboutMe
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft YaHei UI Light", 9.0!)
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(89, 224)
+        Me.Label2.Location = New System.Drawing.Point(90, 224)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(191, 17)
         Me.Label2.TabIndex = 57
@@ -254,11 +254,11 @@ Partial Class AboutMe
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("微软雅黑", 10.5!)
         Me.Label11.ForeColor = System.Drawing.Color.White
-        Me.Label11.Location = New System.Drawing.Point(135, 162)
+        Me.Label11.Location = New System.Drawing.Point(136, 162)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(28, 20)
         Me.Label11.TabIndex = 63
-        Me.Label11.Text = "1.4"
+        Me.Label11.Text = "0.0"
         '
         'Panel1
         '
@@ -295,7 +295,7 @@ Partial Class AboutMe
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Microsoft YaHei UI Light", 9.0!)
         Me.Label14.ForeColor = System.Drawing.Color.White
-        Me.Label14.Location = New System.Drawing.Point(102, 241)
+        Me.Label14.Location = New System.Drawing.Point(103, 241)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(164, 17)
         Me.Label14.TabIndex = 67
@@ -330,9 +330,9 @@ Partial Class AboutMe
         Me.Label17.ForeColor = System.Drawing.Color.White
         Me.Label17.Location = New System.Drawing.Point(434, 64)
         Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(193, 17)
+        Me.Label17.Size = New System.Drawing.Size(200, 17)
         Me.Label17.TabIndex = 70
-        Me.Label17.Text = "RyzuTool是Switch模拟器的安装器"
+        Me.Label17.Text = "RyuzuTool是Switch模拟器的安装器"
         '
         'Label18
         '
@@ -374,9 +374,9 @@ Partial Class AboutMe
         Me.Label21.ForeColor = System.Drawing.Color.White
         Me.Label21.Location = New System.Drawing.Point(434, 176)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(157, 17)
+        Me.Label21.Size = New System.Drawing.Size(234, 17)
         Me.Label21.TabIndex = 74
-        Me.Label21.Text = "浅时光° Triste、是一刀斩哒"
+        Me.Label21.Text = "浅时光° Triste、是一刀斩哒、『DYLIKE』"
         '
         'Label7
         '
@@ -406,7 +406,7 @@ Partial Class AboutMe
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(58, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(783, 448)
+        Me.ClientSize = New System.Drawing.Size(783, 449)
         Me.Controls.Add(Me.Label22)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label21)

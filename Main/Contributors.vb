@@ -5,6 +5,7 @@ Public Class Contributors
         CheckForIllegalCrossThreadCalls = False
         Dim 加载名单线程 As New Threading.Thread(AddressOf 加载名单)
         加载名单线程.Start()
+        TextBox1.Select(0, 0)
     End Sub
 
     Private Sub 加载名单()
@@ -17,6 +18,7 @@ Public Class Contributors
             If IO.File.Exists(Application.StartupPath & "\Contributors.txt") Then
                 IO.File.Delete(Application.StartupPath & "\Contributors.txt")
             End If
+            TextBox1.Select(0, 0)
         Catch ex As Exception
             TextBox1.Text = "获取失败"
         End Try
