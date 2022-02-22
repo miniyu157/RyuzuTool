@@ -27,7 +27,7 @@ You can download the latest version of RyuzuTool on Github, or you can use the f
 ##### Note: No keys (prod.keys, title.keys, etc.) will be built into the tool
 ------
 
-Shallow Time° Triste 2022
+浅时光° Triste 2022
 
 📺[哔哩哔哩 - Qianshiguang233的个人空间](https://space.bilibili.com/1650726013)
 
