@@ -29,7 +29,7 @@ You can download the latest version of RyuzuTool on Github, or you can use the f
 
 Shallow Time° Triste 2022
 
-📺[bleep - Qianshiguang233's personal space](https://space.bilibili.com/1650726013)
+📺[哔哩哔哩 - Qianshiguang233的个人空间](https://space.bilibili.com/1650726013)
 
 🐧[Click here to join the QQ group](https://qm.qq.com/cgi-bin/qm/qr?k=CYpbVCqv2xdQaRck4IMIuzsZHPYEtN5-&jump_from=webapi)
 
