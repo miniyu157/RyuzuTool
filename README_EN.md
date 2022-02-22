@@ -13,8 +13,9 @@ Third-party installation/configuration tools for Switch emulators (Yuzu/Ryujinx)
 > * 📥 Support for importing manually installed emulators
 > * 🕹️ Support for Yuzu mainline/test version , Ryujinx official version/Chinese version/LDN online version interchange
 
-! [CRyu](https://s3.bmp.ovh/imgs/2022/02/e579db97d4876a2f.png)
-! [RyuzuTool-Logo](https://s3.bmp.ovh/imgs/2022/02/1f7e3805734ccd41.png)
+![CRyu](https://s3.bmp.ovh/imgs/2022/02/e579db97d4876a2f.png)
+
+![RyuzuTool-Logo](https://s3.bmp.ovh/imgs/2022/02/1f7e3805734ccd41.png)
 
 You can download the latest version of RyuzuTool on Github, or you can use the following link to download it from the BluePlay cloud
 
