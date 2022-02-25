@@ -3,6 +3,7 @@
 Public Class Contributors
     Private Sub Contributors_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         CheckForIllegalCrossThreadCalls = False
+        TextBox1.Text = "正在加载..."
         Dim 加载名单线程 As New Threading.Thread(AddressOf 加载名单)
         加载名单线程.Start()
         TextBox1.Select(0, 0)

@@ -130,7 +130,43 @@ Public Class Form1
         Button17.Enabled = False
         Dim 检测更新线程 As New Threading.Thread(AddressOf 检测更新)
         检测更新线程.Start()
+
+#Region "公告系统部分"
+        CheckForIllegalCrossThreadCalls = False
+
+        Dim 下载An线程 As New Threading.Thread(AddressOf 下载An)
+        下载An线程.Start()
+#End Region
     End Sub
+    Dim An正文
+    Dim An序号
+    Private Sub 下载An()
+        If File.Exists(Application.StartupPath & "\An.txt") Then File.Delete(Application.StartupPath & "\An.txt")
+        My.Computer.Network.DownloadFile(My.Resources.Source, Application.StartupPath & "\An.txt")
+
+
+        Dim 全部内容 As String = File.ReadAllText(Application.StartupPath & "\An.txt")
+        '获取正文
+        An正文 = 提取中间文本(全部内容, "Ry公告获取开始", "Ry公告获取结束").Replace("(crlf)", vbCrLf)
+        '获取序号
+        An序号 = 提取中间文本(全部内容, "Ry公告序号获取开始", "Ry公告序号获取结束")
+
+        Dim 本地序号 = My.Computer.Registry.CurrentUser.OpenSubKey("SOFTWARE", True).OpenSubKey("RyuzuTool", True).GetValue("An")
+
+        If 本地序号 <> An序号 Then
+            Announcement.TextBox1.Text = An正文
+            Announcement.ShowDialog()
+            My.Computer.Registry.CurrentUser.OpenSubKey("SOFTWARE", True).OpenSubKey("RyuzuTool", True).SetValue("An", An序号)
+        End If
+
+        If File.Exists(Application.StartupPath & "\An.txt") Then File.Delete(Application.StartupPath & "\An.txt")
+    End Sub
+    Function 提取中间文本(ByVal 源文本 As String, ByVal 前导文本 As String, 结束文本 As String) As String
+        Dim 起始位置 = InStr(源文本, 前导文本) + Len(前导文本) - 1
+        Dim 目标文本长度 = InStr(源文本, 结束文本) - 起始位置 - 1
+        提取中间文本 = 源文本.Substring(起始位置, 目标文本长度)
+    End Function
+
     Private Sub 检测更新()
         Dim 检测更新 As New Process
         检测更新.StartInfo.FileName = Application.StartupPath & "\Update.exe"
@@ -743,5 +779,4 @@ Public Class Form1
             Next
         End If
     End Sub
-
 End Class

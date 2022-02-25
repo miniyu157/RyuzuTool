@@ -75,7 +75,7 @@ Partial Class ReleaseManage
         Me.MaterialTabControl1.Controls.Add(Me.TabPage1)
         Me.MaterialTabControl1.Controls.Add(Me.TabPage2)
         Me.MaterialTabControl1.Depth = 0
-        Me.MaterialTabControl1.Location = New System.Drawing.Point(1, 67)
+        Me.MaterialTabControl1.Location = New System.Drawing.Point(1, 92)
         Me.MaterialTabControl1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialTabControl1.Name = "MaterialTabControl1"
         Me.MaterialTabControl1.SelectedIndex = 0
@@ -101,7 +101,7 @@ Partial Class ReleaseManage
         Me.Panel2.Controls.Add(Me.Button3)
         Me.Panel2.Controls.Add(Me.Button1)
         Me.Panel2.Controls.Add(Me.Button2)
-        Me.Panel2.Location = New System.Drawing.Point(36, 210)
+        Me.Panel2.Location = New System.Drawing.Point(36, 214)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(733, 213)
         Me.Panel2.TabIndex = 6
@@ -113,7 +113,7 @@ Partial Class ReleaseManage
         Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button6.Font = New System.Drawing.Font("微软雅黑", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Button6.ForeColor = System.Drawing.Color.White
-        Me.Button6.Location = New System.Drawing.Point(583, 8)
+        Me.Button6.Location = New System.Drawing.Point(583, 20)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(136, 43)
         Me.Button6.TabIndex = 10
@@ -127,7 +127,7 @@ Partial Class ReleaseManage
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button5.Font = New System.Drawing.Font("微软雅黑", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Button5.ForeColor = System.Drawing.Color.White
-        Me.Button5.Location = New System.Drawing.Point(441, 8)
+        Me.Button5.Location = New System.Drawing.Point(441, 20)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(136, 43)
         Me.Button5.TabIndex = 9
@@ -141,7 +141,7 @@ Partial Class ReleaseManage
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Font = New System.Drawing.Font("微软雅黑", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Location = New System.Drawing.Point(15, 8)
+        Me.Button3.Location = New System.Drawing.Point(15, 20)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(136, 43)
         Me.Button3.TabIndex = 7
@@ -155,7 +155,7 @@ Partial Class ReleaseManage
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("微软雅黑", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.White
-        Me.Button1.Location = New System.Drawing.Point(157, 8)
+        Me.Button1.Location = New System.Drawing.Point(157, 20)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(136, 43)
         Me.Button1.TabIndex = 6
@@ -169,7 +169,7 @@ Partial Class ReleaseManage
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("微软雅黑", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(299, 8)
+        Me.Button2.Location = New System.Drawing.Point(299, 20)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(136, 43)
         Me.Button2.TabIndex = 5
@@ -188,7 +188,7 @@ Partial Class ReleaseManage
         Me.GroupBox1.Controls.Add(Me.Label3)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft YaHei UI", 14.25!)
         Me.GroupBox1.ForeColor = System.Drawing.Color.White
-        Me.GroupBox1.Location = New System.Drawing.Point(36, 6)
+        Me.GroupBox1.Location = New System.Drawing.Point(36, 10)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(733, 198)
         Me.GroupBox1.TabIndex = 3
@@ -200,7 +200,7 @@ Partial Class ReleaseManage
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("Microsoft YaHei UI", 14.25!)
         Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(119, 82)
+        Me.Label8.Location = New System.Drawing.Point(119, 84)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(66, 25)
         Me.Label8.TabIndex = 6
@@ -213,7 +213,7 @@ Partial Class ReleaseManage
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button4.Font = New System.Drawing.Font("微软雅黑", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Button4.ForeColor = System.Drawing.Color.White
-        Me.Button4.Location = New System.Drawing.Point(578, 111)
+        Me.Button4.Location = New System.Drawing.Point(578, 114)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(136, 43)
         Me.Button4.TabIndex = 8
@@ -225,7 +225,7 @@ Partial Class ReleaseManage
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Microsoft YaHei UI", 14.25!)
         Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(40, 84)
+        Me.Label7.Location = New System.Drawing.Point(40, 86)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(69, 25)
         Me.Label7.TabIndex = 5
@@ -236,7 +236,7 @@ Partial Class ReleaseManage
         Me.Label6.AutoSize = True
         Me.Label6.Font = New System.Drawing.Font("Microsoft YaHei UI", 14.25!)
         Me.Label6.ForeColor = System.Drawing.Color.White
-        Me.Label6.Location = New System.Drawing.Point(118, 123)
+        Me.Label6.Location = New System.Drawing.Point(118, 125)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(43, 25)
         Me.Label6.TabIndex = 4
@@ -247,7 +247,7 @@ Partial Class ReleaseManage
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft YaHei UI", 14.25!)
         Me.Label5.ForeColor = System.Drawing.Color.White
-        Me.Label5.Location = New System.Drawing.Point(40, 126)
+        Me.Label5.Location = New System.Drawing.Point(40, 128)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(69, 25)
         Me.Label5.TabIndex = 3
@@ -258,7 +258,7 @@ Partial Class ReleaseManage
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft YaHei UI", 14.25!)
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(40, 43)
+        Me.Label2.Location = New System.Drawing.Point(40, 45)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(69, 25)
         Me.Label2.TabIndex = 0
@@ -269,7 +269,7 @@ Partial Class ReleaseManage
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Microsoft YaHei UI", 14.25!)
         Me.Label4.ForeColor = System.Drawing.Color.White
-        Me.Label4.Location = New System.Drawing.Point(194, 43)
+        Me.Label4.Location = New System.Drawing.Point(194, 45)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(56, 25)
         Me.Label4.TabIndex = 2
@@ -280,7 +280,7 @@ Partial Class ReleaseManage
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft YaHei UI", 14.25!)
         Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(119, 43)
+        Me.Label3.Location = New System.Drawing.Point(119, 45)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(69, 25)
         Me.Label3.TabIndex = 1
@@ -305,7 +305,7 @@ Partial Class ReleaseManage
         Me.Panel3.Controls.Add(Me.Button9)
         Me.Panel3.Controls.Add(Me.Button10)
         Me.Panel3.Controls.Add(Me.Button11)
-        Me.Panel3.Location = New System.Drawing.Point(36, 210)
+        Me.Panel3.Location = New System.Drawing.Point(36, 214)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(733, 213)
         Me.Panel3.TabIndex = 8
@@ -318,7 +318,7 @@ Partial Class ReleaseManage
         Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button7.Font = New System.Drawing.Font("微软雅黑", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Button7.ForeColor = System.Drawing.Color.White
-        Me.Button7.Location = New System.Drawing.Point(583, 8)
+        Me.Button7.Location = New System.Drawing.Point(583, 20)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(136, 43)
         Me.Button7.TabIndex = 10
@@ -332,7 +332,7 @@ Partial Class ReleaseManage
         Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button8.Font = New System.Drawing.Font("微软雅黑", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Button8.ForeColor = System.Drawing.Color.White
-        Me.Button8.Location = New System.Drawing.Point(441, 8)
+        Me.Button8.Location = New System.Drawing.Point(441, 20)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(136, 43)
         Me.Button8.TabIndex = 9
@@ -346,7 +346,7 @@ Partial Class ReleaseManage
         Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button9.Font = New System.Drawing.Font("微软雅黑", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Button9.ForeColor = System.Drawing.Color.White
-        Me.Button9.Location = New System.Drawing.Point(15, 8)
+        Me.Button9.Location = New System.Drawing.Point(15, 20)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(136, 43)
         Me.Button9.TabIndex = 7
@@ -360,7 +360,7 @@ Partial Class ReleaseManage
         Me.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button10.Font = New System.Drawing.Font("微软雅黑", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Button10.ForeColor = System.Drawing.Color.White
-        Me.Button10.Location = New System.Drawing.Point(157, 8)
+        Me.Button10.Location = New System.Drawing.Point(157, 20)
         Me.Button10.Name = "Button10"
         Me.Button10.Size = New System.Drawing.Size(136, 43)
         Me.Button10.TabIndex = 6
@@ -374,7 +374,7 @@ Partial Class ReleaseManage
         Me.Button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button11.Font = New System.Drawing.Font("微软雅黑", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Button11.ForeColor = System.Drawing.Color.White
-        Me.Button11.Location = New System.Drawing.Point(299, 8)
+        Me.Button11.Location = New System.Drawing.Point(299, 20)
         Me.Button11.Name = "Button11"
         Me.Button11.Size = New System.Drawing.Size(136, 43)
         Me.Button11.TabIndex = 5
@@ -393,7 +393,7 @@ Partial Class ReleaseManage
         Me.GroupBox2.Controls.Add(Me.Label14)
         Me.GroupBox2.Font = New System.Drawing.Font("Microsoft YaHei UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.GroupBox2.ForeColor = System.Drawing.Color.White
-        Me.GroupBox2.Location = New System.Drawing.Point(36, 6)
+        Me.GroupBox2.Location = New System.Drawing.Point(36, 10)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(733, 198)
         Me.GroupBox2.TabIndex = 7
@@ -405,7 +405,7 @@ Partial Class ReleaseManage
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft YaHei UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(119, 82)
+        Me.Label9.Location = New System.Drawing.Point(119, 84)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(66, 25)
         Me.Label9.TabIndex = 6
@@ -418,7 +418,7 @@ Partial Class ReleaseManage
         Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button12.Font = New System.Drawing.Font("微软雅黑", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Button12.ForeColor = System.Drawing.Color.White
-        Me.Button12.Location = New System.Drawing.Point(578, 111)
+        Me.Button12.Location = New System.Drawing.Point(578, 114)
         Me.Button12.Name = "Button12"
         Me.Button12.Size = New System.Drawing.Size(136, 43)
         Me.Button12.TabIndex = 8
@@ -430,7 +430,7 @@ Partial Class ReleaseManage
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("Microsoft YaHei UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.White
-        Me.Label10.Location = New System.Drawing.Point(40, 84)
+        Me.Label10.Location = New System.Drawing.Point(40, 86)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(69, 25)
         Me.Label10.TabIndex = 5
@@ -441,7 +441,7 @@ Partial Class ReleaseManage
         Me.Label11.AutoSize = True
         Me.Label11.Font = New System.Drawing.Font("Microsoft YaHei UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.White
-        Me.Label11.Location = New System.Drawing.Point(118, 123)
+        Me.Label11.Location = New System.Drawing.Point(118, 125)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(43, 25)
         Me.Label11.TabIndex = 4
@@ -452,7 +452,7 @@ Partial Class ReleaseManage
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("Microsoft YaHei UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.White
-        Me.Label12.Location = New System.Drawing.Point(40, 126)
+        Me.Label12.Location = New System.Drawing.Point(40, 128)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(69, 25)
         Me.Label12.TabIndex = 3
@@ -463,7 +463,7 @@ Partial Class ReleaseManage
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("Microsoft YaHei UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label13.ForeColor = System.Drawing.Color.White
-        Me.Label13.Location = New System.Drawing.Point(40, 43)
+        Me.Label13.Location = New System.Drawing.Point(40, 45)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(69, 25)
         Me.Label13.TabIndex = 0
@@ -474,7 +474,7 @@ Partial Class ReleaseManage
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Microsoft YaHei UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label15.ForeColor = System.Drawing.Color.White
-        Me.Label15.Location = New System.Drawing.Point(119, 43)
+        Me.Label15.Location = New System.Drawing.Point(119, 45)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(69, 25)
         Me.Label15.TabIndex = 1
@@ -485,7 +485,7 @@ Partial Class ReleaseManage
         Me.Label14.AutoSize = True
         Me.Label14.Font = New System.Drawing.Font("Microsoft YaHei UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label14.ForeColor = System.Drawing.Color.White
-        Me.Label14.Location = New System.Drawing.Point(195, 43)
+        Me.Label14.Location = New System.Drawing.Point(195, 45)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(66, 25)
         Me.Label14.TabIndex = 2
@@ -494,10 +494,11 @@ Partial Class ReleaseManage
         'Label16
         '
         Me.Label16.AutoSize = True
+        Me.Label16.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(58, Byte), Integer))
         Me.Label16.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Label16.Font = New System.Drawing.Font("微软雅黑", 10.5!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label16.ForeColor = System.Drawing.Color.White
-        Me.Label16.Location = New System.Drawing.Point(55, 363)
+        Me.Label16.Location = New System.Drawing.Point(63, 414)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(173, 20)
         Me.Label16.TabIndex = 11
@@ -507,7 +508,7 @@ Partial Class ReleaseManage
         '
         Me.MaterialTabSelector1.BaseTabControl = Me.MaterialTabControl1
         Me.MaterialTabSelector1.Depth = 0
-        Me.MaterialTabSelector1.Location = New System.Drawing.Point(32, 0)
+        Me.MaterialTabSelector1.Location = New System.Drawing.Point(32, 31)
         Me.MaterialTabSelector1.MouseState = MaterialSkin.MouseState.HOVER
         Me.MaterialTabSelector1.Name = "MaterialTabSelector1"
         Me.MaterialTabSelector1.Size = New System.Drawing.Size(781, 60)
@@ -520,7 +521,7 @@ Partial Class ReleaseManage
         Me.Label1.BackColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(79, Byte), Integer))
         Me.Label1.Font = New System.Drawing.Font("Century Gothic", 18.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(580, 15)
+        Me.Label1.Location = New System.Drawing.Point(580, 46)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(137, 30)
         Me.Label1.TabIndex = 3
@@ -531,7 +532,7 @@ Partial Class ReleaseManage
         Me.PictureBox2.BackColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(79, Byte), Integer))
         Me.PictureBox2.Cursor = System.Windows.Forms.Cursors.Default
         Me.PictureBox2.Image = Global.Main.My.Resources.Resources.QF
-        Me.PictureBox2.Location = New System.Drawing.Point(728, 10)
+        Me.PictureBox2.Location = New System.Drawing.Point(728, 41)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(40, 40)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -541,7 +542,7 @@ Partial Class ReleaseManage
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(55, Byte), Integer), CType(CType(71, Byte), Integer), CType(CType(79, Byte), Integer))
-        Me.Panel1.Location = New System.Drawing.Point(0, 0)
+        Me.Panel1.Location = New System.Drawing.Point(1, 31)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(32, 60)
         Me.Panel1.TabIndex = 5
@@ -550,15 +551,19 @@ Partial Class ReleaseManage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(58, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(814, 534)
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(29, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
+        Me.ClientSize = New System.Drawing.Size(814, 566)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.MaterialTabSelector1)
         Me.Controls.Add(Me.MaterialTabControl1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.MaximizeBox = False
         Me.Name = "ReleaseManage"
+        Me.Opacity = 0R
+        Me.ShowIcon = False
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.MaterialTabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)

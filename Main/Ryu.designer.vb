@@ -25,19 +25,21 @@ Partial Class Ryu
         Me.components = New System.ComponentModel.Container()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.MaterialRadioButton3 = New MaterialSkin.Controls.MaterialRadioButton()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.PictureBox9 = New System.Windows.Forms.PictureBox()
         Me.PictureBox13 = New System.Windows.Forms.PictureBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label23 = New System.Windows.Forms.Label()
-        Me.Label22 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button5 = New System.Windows.Forms.Button()
-        Me.MaterialRadioButton3 = New MaterialSkin.Controls.MaterialRadioButton()
         Me.MaterialRadioButton2 = New MaterialSkin.Controls.MaterialRadioButton()
         Me.MaterialRadioButton1 = New MaterialSkin.Controls.MaterialRadioButton()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -69,14 +71,12 @@ Partial Class Ryu
         Me.ProgressBar3 = New System.Windows.Forms.ProgressBar()
         Me.Label30 = New System.Windows.Forms.Label()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
+        Me.Panel1.SuspendLayout()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.Panel1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
         CType(Me.PictureBox8, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -127,6 +127,72 @@ Partial Class Ryu
         Me.TabPage1.Size = New System.Drawing.Size(570, 428)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "TabPage1"
+        '
+        'Panel2
+        '
+        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel2.Location = New System.Drawing.Point(2, 355)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(567, 1)
+        Me.Panel2.TabIndex = 76
+        '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.Label23)
+        Me.Panel1.Controls.Add(Me.Label22)
+        Me.Panel1.Location = New System.Drawing.Point(547, 413)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(588, 466)
+        Me.Panel1.TabIndex = 38
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Font = New System.Drawing.Font("微软雅黑 Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label23.ForeColor = System.Drawing.Color.White
+        Me.Label23.Location = New System.Drawing.Point(168, 197)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(257, 21)
+        Me.Label23.TabIndex = 23
+        Me.Label23.Text = "*若长时间未加载，请检查网络环境"
+        '
+        'Label22
+        '
+        Me.Label22.AutoSize = True
+        Me.Label22.Font = New System.Drawing.Font("微软雅黑", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label22.ForeColor = System.Drawing.Color.White
+        Me.Label22.Location = New System.Drawing.Point(213, 123)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(184, 46)
+        Me.Label22.TabIndex = 22
+        Me.Label22.Text = "正在加载..."
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("微软雅黑", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label3.ForeColor = System.Drawing.Color.White
+        Me.Label3.Location = New System.Drawing.Point(74, 376)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(69, 17)
+        Me.Label3.TabIndex = 75
+        Me.Label3.Text = "ryujinx.org"
+        '
+        'MaterialRadioButton3
+        '
+        Me.MaterialRadioButton3.AutoSize = True
+        Me.MaterialRadioButton3.Depth = 0
+        Me.MaterialRadioButton3.Font = New System.Drawing.Font("Roboto", 10.0!)
+        Me.MaterialRadioButton3.Location = New System.Drawing.Point(307, 263)
+        Me.MaterialRadioButton3.Margin = New System.Windows.Forms.Padding(0)
+        Me.MaterialRadioButton3.MouseLocation = New System.Drawing.Point(-1, -1)
+        Me.MaterialRadioButton3.MouseState = MaterialSkin.MouseState.HOVER
+        Me.MaterialRadioButton3.Name = "MaterialRadioButton3"
+        Me.MaterialRadioButton3.Ripple = True
+        Me.MaterialRadioButton3.Size = New System.Drawing.Size(25, 30)
+        Me.MaterialRadioButton3.TabIndex = 29
+        Me.MaterialRadioButton3.TabStop = True
+        Me.MaterialRadioButton3.UseVisualStyleBackColor = True
         '
         'PictureBox6
         '
@@ -196,37 +262,6 @@ Partial Class Ryu
         Me.Label1.TabIndex = 39
         Me.Label1.Text = "选择一个版本"
         '
-        'Panel1
-        '
-        Me.Panel1.Controls.Add(Me.Label23)
-        Me.Panel1.Controls.Add(Me.Label22)
-        Me.Panel1.Location = New System.Drawing.Point(547, 413)
-        Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(588, 466)
-        Me.Panel1.TabIndex = 38
-        '
-        'Label23
-        '
-        Me.Label23.AutoSize = True
-        Me.Label23.Font = New System.Drawing.Font("微软雅黑 Light", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.Label23.ForeColor = System.Drawing.Color.White
-        Me.Label23.Location = New System.Drawing.Point(168, 197)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(257, 21)
-        Me.Label23.TabIndex = 23
-        Me.Label23.Text = "*若长时间未加载，请检查网络环境"
-        '
-        'Label22
-        '
-        Me.Label22.AutoSize = True
-        Me.Label22.Font = New System.Drawing.Font("微软雅黑", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.Label22.ForeColor = System.Drawing.Color.White
-        Me.Label22.Location = New System.Drawing.Point(213, 123)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(184, 46)
-        Me.Label22.TabIndex = 22
-        Me.Label22.Text = "正在加载..."
-        '
         'ComboBox1
         '
         Me.ComboBox1.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(58, Byte), Integer))
@@ -267,22 +302,6 @@ Partial Class Ryu
         Me.Button5.TabIndex = 31
         Me.Button5.Text = "取消(&C)"
         Me.Button5.UseVisualStyleBackColor = True
-        '
-        'MaterialRadioButton3
-        '
-        Me.MaterialRadioButton3.AutoSize = True
-        Me.MaterialRadioButton3.Depth = 0
-        Me.MaterialRadioButton3.Font = New System.Drawing.Font("Roboto", 10.0!)
-        Me.MaterialRadioButton3.Location = New System.Drawing.Point(307, 263)
-        Me.MaterialRadioButton3.Margin = New System.Windows.Forms.Padding(0)
-        Me.MaterialRadioButton3.MouseLocation = New System.Drawing.Point(-1, -1)
-        Me.MaterialRadioButton3.MouseState = MaterialSkin.MouseState.HOVER
-        Me.MaterialRadioButton3.Name = "MaterialRadioButton3"
-        Me.MaterialRadioButton3.Ripple = True
-        Me.MaterialRadioButton3.Size = New System.Drawing.Size(25, 30)
-        Me.MaterialRadioButton3.TabIndex = 29
-        Me.MaterialRadioButton3.TabStop = True
-        Me.MaterialRadioButton3.UseVisualStyleBackColor = True
         '
         'MaterialRadioButton2
         '
@@ -408,7 +427,7 @@ Partial Class Ryu
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(170, 37)
         Me.Button8.TabIndex = 30
-        Me.Button8.Text = "             Next"
+        Me.Button8.Text = "             下一步"
         Me.Button8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button8.UseVisualStyleBackColor = True
         '
@@ -509,7 +528,7 @@ Partial Class Ryu
         Me.Button11.Name = "Button11"
         Me.Button11.Size = New System.Drawing.Size(170, 37)
         Me.Button11.TabIndex = 35
-        Me.Button11.Text = "             Next"
+        Me.Button11.Text = "             下一步"
         Me.Button11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.Button11.UseVisualStyleBackColor = True
         '
@@ -664,25 +683,6 @@ Partial Class Ryu
         Me.Label30.TabIndex = 20
         Me.Label30.Text = "正在安装文件"
         '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("微软雅黑", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.Label3.ForeColor = System.Drawing.Color.White
-        Me.Label3.Location = New System.Drawing.Point(74, 376)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(69, 17)
-        Me.Label3.TabIndex = 75
-        Me.Label3.Text = "ryujinx.org"
-        '
-        'Panel2
-        '
-        Me.Panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel2.Location = New System.Drawing.Point(2, 355)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(567, 1)
-        Me.Panel2.TabIndex = 76
-        '
         'Ryu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
@@ -698,11 +698,11 @@ Partial Class Ryu
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
+        Me.Panel1.ResumeLayout(False)
+        Me.Panel1.PerformLayout()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox9, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox13, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.Panel1.ResumeLayout(False)
-        Me.Panel1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()

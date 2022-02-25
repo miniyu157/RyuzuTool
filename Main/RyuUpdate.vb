@@ -34,7 +34,28 @@ Public Class RyuUpdate
         Dim OpT As New Threading.Thread(AddressOf Op)
         OpT.Start()
         Transitions.Transition.run(Me, "Top", Me.Top - 15, New Transitions.TransitionType_Deceleration(250))
+        AddHandler MyBase.MouseDown, AddressOf 鼠标按下
+        AddHandler MyBase.MouseMove, AddressOf 鼠标移动
+        AddHandler MyBase.MouseUp, AddressOf 鼠标弹起
     End Sub
+#Region "整个窗体都可以拖动"
+    Dim 是否按下 As Boolean
+    Dim 鼠标在窗体中的X As Integer
+    Dim 鼠标在窗体中的Y As Integer
+    Private Sub 鼠标按下(sender As Object, e As MouseEventArgs)
+        鼠标在窗体中的X = e.X
+        鼠标在窗体中的Y = e.Y
+        是否按下 = True
+    End Sub
+    Private Sub 鼠标移动(sender As Object, e As MouseEventArgs)
+        If 是否按下 = True Then
+            Me.Location = New Point(Cursor.Position.X - 鼠标在窗体中的X, Cursor.Position.Y - 鼠标在窗体中的Y)
+        End If
+    End Sub
+    Private Sub 鼠标弹起(sender As Object, e As MouseEventArgs)
+        是否按下 = False
+    End Sub
+#End Region
     Private Sub Op()
         Me.Opacity = 0
         For i = 1 To 50
@@ -44,24 +65,7 @@ Public Class RyuUpdate
         Next
     End Sub
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
-
-        Dim 处理位置 As New Threading.Thread(AddressOf 位置)
-        Dim 处理透明度 As New Threading.Thread(AddressOf 透明)
-        处理透明度.Start()
-        处理位置.Start()
-    End Sub
-    Private Sub 透明()
-        For i = 1 To 50
-            Threading.Thread.Sleep(10)
-            Me.Opacity -= (i / 100) * 2
-            Application.DoEvents()
-        Next
-        ReleaseManage.Button10.Enabled = True
-        ReleaseManage.Button10.Text = "检查更新"
         Me.Close()
-    End Sub
-    Private Sub 位置()
-        Transitions.Transition.run(Me, "Top", Me.Top + 15, New Transitions.TransitionType_Deceleration(250))
     End Sub
 
     '确定

@@ -122,11 +122,11 @@ Partial Class CRyu
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft YaHei UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Microsoft YaHei UI", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(91, 15)
+        Me.Label2.Location = New System.Drawing.Point(91, 14)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(78, 25)
+        Me.Label2.Size = New System.Drawing.Size(80, 27)
         Me.Label2.TabIndex = 38
         Me.Label2.Text = "Ryujinx"
         '
@@ -251,7 +251,7 @@ Partial Class CRyu
         '
         Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(162, Byte), Integer), CType(CType(164, Byte), Integer), CType(CType(168, Byte), Integer))
         Me.Panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel6.Location = New System.Drawing.Point(0, 423)
+        Me.Panel6.Location = New System.Drawing.Point(0, 429)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(572, 1)
         Me.Panel6.TabIndex = 47
@@ -263,7 +263,7 @@ Partial Class CRyu
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Microsoft YaHei UI Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.ForeColor = System.Drawing.Color.White
-        Me.Button2.Location = New System.Drawing.Point(455, 442)
+        Me.Button2.Location = New System.Drawing.Point(455, 445)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(87, 30)
         Me.Button2.TabIndex = 39
@@ -277,7 +277,7 @@ Partial Class CRyu
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Font = New System.Drawing.Font("Microsoft YaHei UI Light", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.ForeColor = System.Drawing.Color.White
-        Me.Button3.Location = New System.Drawing.Point(351, 442)
+        Me.Button3.Location = New System.Drawing.Point(351, 445)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(87, 30)
         Me.Button3.TabIndex = 48
@@ -289,7 +289,7 @@ Partial Class CRyu
         Me.Label9.AutoSize = True
         Me.Label9.Font = New System.Drawing.Font("Microsoft YaHei UI", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.White
-        Me.Label9.Location = New System.Drawing.Point(72, 448)
+        Me.Label9.Location = New System.Drawing.Point(72, 451)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(69, 17)
         Me.Label9.TabIndex = 39

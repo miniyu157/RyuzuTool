@@ -92,6 +92,12 @@
     <Compile Include="AboutMe.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Announcement.Designer.vb">
+      <DependentUpon>Announcement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Announcement.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="ChangeLogDisplay.designer.vb">
       <DependentUpon>ChangeLogDisplay.vb</DependentUpon>
     </Compile>
@@ -202,6 +208,9 @@
   <ItemGroup>
     <EmbeddedResource Include="AboutMe.resx">
       <DependentUpon>AboutMe.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Announcement.resx">
+      <DependentUpon>Announcement.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ChangeLogDisplay.resx">
       <DependentUpon>ChangeLogDisplay.vb</DependentUpon>

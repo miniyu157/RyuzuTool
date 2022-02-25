@@ -187,6 +187,7 @@ Partial Class SetRyuFolder
         Me.MaximizeBox = False
         Me.MinimizeBox = False
         Me.Name = "SetRyuFolder"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

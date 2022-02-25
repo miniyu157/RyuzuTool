@@ -3,12 +3,83 @@ Imports System.IO
 Imports DSAPI
 Imports System.Runtime.InteropServices
 Imports MaterialSkin
+Imports Transitions
 Public Class ReleaseManage
+    Dim 窗体是否可以拖动 As Boolean
+    Dim CloseButton As Button
+    Dim MinButton As Button
+
+    Private Const CS_DropSHADOW As Integer = &H20000
+    Private Const GCL_STYLE As Integer = (-26)
+    <DllImport("user32.dll", CharSet:=CharSet.Auto)>
+    Public Shared Function SetClassLong(hwnd As IntPtr, nIndex As Integer, dwNewLong As Integer) As Integer
+    End Function
+    <DllImport("user32.dll", CharSet:=CharSet.Auto)>
+    Public Shared Function GetClassLong(hwnd As IntPtr, nIndex As Integer) As Integer
+    End Function
+
     Dim LoadCheckRyu As Boolean
     Private Sub ReleaseManage_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.MinimizeBox = False
-        Me.MaximizeBox = False
-        Me.FormBorderStyle = FormBorderStyle.FixedDialog
+        Me.Width -= 30
+        Me.Height -= 30
+        Me.Top += 15
+        Me.Left += 15
+
+        Dim TopBorder As Control = New Panel With {.Location = New Point(0, 0), .Size = New Size(Me.Width, 1), .BackColor = Color.FromArgb(162, 164, 168), .BorderStyle = BorderStyle.FixedSingle}
+        Dim BottomBorder As Control = New Panel With {.Location = New Point(0, Me.Height - 1), .Size = New Size(Me.Width, 1), .BackColor = Color.FromArgb(162, 164, 168), .BorderStyle = BorderStyle.FixedSingle}
+        Dim LeftBorder As Control = New Panel With {.Location = New Point(0, 0), .Size = New Size(1, Me.Height), .BackColor = Color.FromArgb(162, 164, 168), .BorderStyle = BorderStyle.FixedSingle}
+        Dim RightBorder As Control = New Panel With {.Location = New Point(Me.Width - 1, 0), .Size = New Size(1, Me.Height), .BackColor = Color.FromArgb(162, 164, 168), .BorderStyle = BorderStyle.FixedSingle}
+        Me.Controls.Add(TopBorder)
+        Me.Controls.Add(BottomBorder)
+        Me.Controls.Add(LeftBorder)
+        Me.Controls.Add(RightBorder)
+
+        CloseButton = New Button With {.Text = "x", .Size = New Drawing.Size(30, 30), .Location = New Point(Me.Width - 42, -3), .Font = New Font("微软雅黑", 10.5), .ForeColor = Color.White, .BackColor = Me.BackColor, .FlatStyle = FlatStyle.Flat}
+        MinButton = New Button With {.Text = "_", .Size = New Drawing.Size(30, 30), .Location = New Point(Me.Width - 78, -3), .Font = New Font("微软雅黑", 10.5), .ForeColor = Color.White, .BackColor = Me.BackColor, .FlatStyle = FlatStyle.Flat, .TextAlign = ContentAlignment.TopCenter}
+
+        If Me.ControlBox = True Then
+            CloseButton.FlatAppearance.BorderSize = 0
+            CloseButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(Me.BackColor.R + 20, Me.BackColor.G + 17, Me.BackColor.B + 21)
+            Me.Controls.Add(CloseButton)
+            AddHandler CloseButton.Click, AddressOf Closewindow
+            If Me.MinimizeBox = True Then
+                MinButton.FlatAppearance.BorderSize = 0
+                MinButton.FlatAppearance.MouseDownBackColor = Color.FromArgb(Me.BackColor.R + 20, Me.BackColor.G + 17, Me.BackColor.B + 21)
+                Me.Controls.Add(MinButton)
+                AddHandler MinButton.Click, AddressOf Minwindow
+            End If
+        End If
+
+        窗体是否可以拖动 = True
+
+        窗体是否可以拖动 = True
+        Me.Text = "Switch-emu管理器"
+
+        If 窗体是否可以拖动 = True Then
+            AddHandler MyBase.MouseDown, AddressOf 鼠标按下
+            AddHandler MyBase.MouseMove, AddressOf 鼠标移动
+            AddHandler MyBase.MouseUp, AddressOf 鼠标弹起
+        End If
+
+        CheckForIllegalCrossThreadCalls = False
+
+        Dim 启动透明线程 As New Threading.Thread(AddressOf 启动透明)
+        启动透明线程.Start()
+
+        Transition.run(Me, "Width", Me.Width + 30, New Transitions.TransitionType_Deceleration(250))
+        Transition.run(Me, "Height", Me.Height + 30, New Transitions.TransitionType_Deceleration(250))
+        Transition.run(Me, "Top", Me.Top - 15, New Transitions.TransitionType_Deceleration(250))
+        Transition.run(Me, "Left", Me.Left - 15, New Transitions.TransitionType_Deceleration(250))
+        Transition.run(TopBorder, "Width", TopBorder.Width + 30, New Transitions.TransitionType_Deceleration(250))
+        Transition.run(BottomBorder, "Width", BottomBorder.Width + 30, New Transitions.TransitionType_Deceleration(250))
+        Transition.run(LeftBorder, "Height", LeftBorder.Height + 30, New Transitions.TransitionType_Deceleration(250))
+        Transition.run(RightBorder, "Height", RightBorder.Height + 30, New Transitions.TransitionType_Deceleration(250))
+        Transition.run(BottomBorder, "Top", BottomBorder.Top + 30, New Transitions.TransitionType_Deceleration(250))
+        Transition.run(RightBorder, "Left", RightBorder.Left + 30, New Transitions.TransitionType_Deceleration(250))
+        Transition.run(CloseButton, "Left", CloseButton.Left + 30, New Transitions.TransitionType_Deceleration(250))
+        Transition.run(MinButton, "Left", MinButton.Left + 30, New Transitions.TransitionType_Deceleration(250))
+
+        SetClassLong(Me.Handle, GCL_STYLE, GetClassLong(Me.Handle, GCL_STYLE) Or CS_DropSHADOW)
 
         Label1.Font = New Font("Century Gothic", 18)
 
@@ -412,4 +483,85 @@ Public Class ReleaseManage
         Shell("explorer """ & URL & """")
     End Sub
 
+#Region "整个窗体都可以拖动"
+    Dim 是否按下 As Boolean
+    Dim 鼠标在窗体中的X As Integer
+    Dim 鼠标在窗体中的Y As Integer
+    Private Sub 鼠标按下(sender As Object, e As MouseEventArgs) Handles MaterialTabSelector1.MouseDown
+        鼠标在窗体中的X = e.X
+        鼠标在窗体中的Y = e.Y
+        是否按下 = True
+    End Sub
+    Private Sub 鼠标移动(sender As Object, e As MouseEventArgs)
+        If 是否按下 = True Then
+            Me.Location = New Point(Cursor.Position.X - 鼠标在窗体中的X, Cursor.Position.Y - 鼠标在窗体中的Y)
+        End If
+    End Sub
+    Private Sub 鼠标移动2(sender As Object, e As MouseEventArgs) Handles MaterialTabSelector1.MouseMove
+        If 是否按下 = True Then
+            Me.Location = New Point(Cursor.Position.X - 鼠标在窗体中的X - 32, Cursor.Position.Y - 鼠标在窗体中的Y - 31)
+        End If
+    End Sub
+
+    Private Sub 鼠标弹起(sender As Object, e As MouseEventArgs) Handles MaterialTabSelector1.MouseUp
+        是否按下 = False
+    End Sub
+    Private Sub Form1_FormClosing(sender As Object, e As FormClosingEventArgs) Handles MyBase.FormClosing
+        e.Cancel = True
+        Dim 处理位置 As New Threading.Thread(AddressOf 位置)
+        Dim 处理透明度 As New Threading.Thread(AddressOf 透明)
+        处理透明度.Start()
+        处理位置.Start()
+    End Sub
+
+#Region "一些按钮的功能"
+    Private Sub 启动透明()
+        For i = 1 To 25
+            Threading.Thread.Sleep(10)
+            Me.Opacity += (i / 100) * 4
+            Application.DoEvents()
+        Next
+    End Sub
+    Private Sub 位置()
+        Transition.run(Me, "Top", Me.Top + 15, New Transitions.TransitionType_Deceleration(250))
+        Transition.run(Me, "Left", Me.Left + 15, New Transitions.TransitionType_Deceleration(250))
+        Transition.run(Me, "Height", Me.Height - 30, New Transitions.TransitionType_Deceleration(250))
+        Transition.run(Me, "Width", Me.Width - 30, New Transitions.TransitionType_Deceleration(250))
+    End Sub
+    Private Sub Closewindow(sender As Object, e As EventArgs)
+        CloseButton.Visible = False
+        MinButton.Visible = False
+
+        Dim 处理位置 As New Threading.Thread(AddressOf 位置)
+        Dim 处理透明度 As New Threading.Thread(AddressOf 透明)
+        处理透明度.Start()
+        处理位置.Start()
+    End Sub
+    Private Sub 透明()
+        For i = 1 To 25
+            Threading.Thread.Sleep(10)
+            Me.Opacity -= (i / 100) * 4
+            Application.DoEvents()
+        Next
+
+        Dim ResetTool = New Process
+        ResetTool.StartInfo.FileName = Application.StartupPath & "\Bin\ResetApp.exe"
+        ResetTool.StartInfo.WindowStyle = ProcessWindowStyle.Hidden
+        ResetTool.Start()
+    End Sub
+    Private Sub Minwindow(sender As Object, e As EventArgs)
+        Dim 最小化透明线程 As New Threading.Thread(AddressOf 最小化透明)
+        最小化透明线程.Start()
+    End Sub
+
+    Private Sub 最小化透明()
+        For i = 1 To 5
+            Threading.Thread.Sleep(10)
+            Me.Opacity -= 0.2
+        Next
+        Me.WindowState = FormWindowState.Minimized
+        Me.Opacity = 1
+    End Sub
+#End Region
+#End Region
 End Class

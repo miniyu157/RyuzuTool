@@ -138,13 +138,13 @@ Partial Class Form1
         'TabPage1
         '
         Me.TabPage1.BackColor = System.Drawing.Color.FromArgb(CType(CType(35, Byte), Integer), CType(CType(54, Byte), Integer), CType(CType(58, Byte), Integer))
+        Me.TabPage1.Controls.Add(Me.PictureBox1)
         Me.TabPage1.Controls.Add(Me.Panel4)
         Me.TabPage1.Controls.Add(Me.Panel3)
         Me.TabPage1.Controls.Add(Me.Panel2)
         Me.TabPage1.Controls.Add(Me.PictureBox2)
         Me.TabPage1.Controls.Add(Me.Label3)
         Me.TabPage1.Controls.Add(Me.Label5)
-        Me.TabPage1.Controls.Add(Me.PictureBox1)
         Me.TabPage1.Controls.Add(Me.Label4)
         Me.TabPage1.Controls.Add(Me.Button18)
         Me.TabPage1.Controls.Add(Me.Button17)
@@ -199,6 +199,7 @@ Partial Class Form1
         '
         'PictureBox3
         '
+        Me.PictureBox3.Image = Global.Main.My.Resources.Resources.Tool
         Me.PictureBox3.Location = New System.Drawing.Point(0, 13)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(30, 30)
@@ -223,6 +224,7 @@ Partial Class Form1
         '
         'PictureBox2
         '
+        Me.PictureBox2.Image = Global.Main.My.Resources.Resources.Install
         Me.PictureBox2.Location = New System.Drawing.Point(83, 143)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(30, 30)
@@ -255,6 +257,7 @@ Partial Class Form1
         'PictureBox1
         '
         Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Default
+        Me.PictureBox1.Image = Global.Main.My.Resources.Resources.QF
         Me.PictureBox1.Location = New System.Drawing.Point(402, 24)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(90, 90)
@@ -312,7 +315,7 @@ Partial Class Form1
         Me.Button15.Name = "Button15"
         Me.Button15.Size = New System.Drawing.Size(129, 26)
         Me.Button15.TabIndex = 10
-        Me.Button15.Text = "About"
+        Me.Button15.Text = "关于"
         Me.Button15.UseVisualStyleBackColor = True
         '
         'Button1
