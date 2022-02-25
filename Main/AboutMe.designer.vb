@@ -134,7 +134,7 @@ Partial Class AboutMe
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("微软雅黑", 26.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(138, 30)
+        Me.Label1.Location = New System.Drawing.Point(139, 30)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(196, 46)
         Me.Label1.TabIndex = 41
@@ -144,7 +144,7 @@ Partial Class AboutMe
         '
         Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Default
         Me.PictureBox1.Image = Global.Main.My.Resources.Resources.QF
-        Me.PictureBox1.Location = New System.Drawing.Point(40, 30)
+        Me.PictureBox1.Location = New System.Drawing.Point(40, 29)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(90, 90)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -163,7 +163,7 @@ Partial Class AboutMe
         Me.Label8.AutoSize = True
         Me.Label8.Font = New System.Drawing.Font("微软雅黑 Light", 10.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.White
-        Me.Label8.Location = New System.Drawing.Point(182, 395)
+        Me.Label8.Location = New System.Drawing.Point(181, 395)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(152, 20)
         Me.Label8.TabIndex = 54
@@ -221,7 +221,7 @@ Partial Class AboutMe
         'PictureBox3
         '
         Me.PictureBox3.Image = Global.Main.My.Resources.Resources.bilibili_line
-        Me.PictureBox3.Location = New System.Drawing.Point(113, 358)
+        Me.PictureBox3.Location = New System.Drawing.Point(112, 358)
         Me.PictureBox3.Name = "PictureBox3"
         Me.PictureBox3.Size = New System.Drawing.Size(35, 35)
         Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -231,7 +231,7 @@ Partial Class AboutMe
         'PictureBox6
         '
         Me.PictureBox6.Image = Global.Main.My.Resources.Resources.github_fill
-        Me.PictureBox6.Location = New System.Drawing.Point(52, 358)
+        Me.PictureBox6.Location = New System.Drawing.Point(51, 358)
         Me.PictureBox6.Name = "PictureBox6"
         Me.PictureBox6.Size = New System.Drawing.Size(35, 35)
         Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -243,7 +243,7 @@ Partial Class AboutMe
         Me.Label10.AutoSize = True
         Me.Label10.Font = New System.Drawing.Font("微软雅黑 Light", 10.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label10.ForeColor = System.Drawing.Color.White
-        Me.Label10.Location = New System.Drawing.Point(141, 87)
+        Me.Label10.Location = New System.Drawing.Point(142, 87)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(197, 20)
         Me.Label10.TabIndex = 62
@@ -273,7 +273,7 @@ Partial Class AboutMe
         Me.Label12.AutoSize = True
         Me.Label12.Font = New System.Drawing.Font("微软雅黑", 10.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label12.ForeColor = System.Drawing.Color.White
-        Me.Label12.Location = New System.Drawing.Point(43, 396)
+        Me.Label12.Location = New System.Drawing.Point(42, 396)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(55, 20)
         Me.Label12.TabIndex = 65
@@ -284,7 +284,7 @@ Partial Class AboutMe
         Me.Label13.AutoSize = True
         Me.Label13.Font = New System.Drawing.Font("微软雅黑", 10.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
         Me.Label13.ForeColor = System.Drawing.Color.White
-        Me.Label13.Location = New System.Drawing.Point(99, 396)
+        Me.Label13.Location = New System.Drawing.Point(98, 396)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(65, 20)
         Me.Label13.TabIndex = 66
@@ -306,7 +306,7 @@ Partial Class AboutMe
         Me.Label15.AutoSize = True
         Me.Label15.Font = New System.Drawing.Font("Microsoft YaHei UI Light", 9.0!)
         Me.Label15.ForeColor = System.Drawing.Color.White
-        Me.Label15.Location = New System.Drawing.Point(180, 365)
+        Me.Label15.Location = New System.Drawing.Point(179, 365)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(156, 17)
         Me.Label15.TabIndex = 68
@@ -343,7 +343,7 @@ Partial Class AboutMe
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(194, 17)
         Me.Label18.TabIndex = 71
-        Me.Label18.Text = "你可以点击主界面 ""捐助"" 支持我们"
+        Me.Label18.Text = "你可以点击主界面 ""赞助"" 支持我们"
         '
         'Label19
         '

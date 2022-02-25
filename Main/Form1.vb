@@ -8,7 +8,7 @@ Public Class Form1
         '
         '
         '
-        '------------------------------------ Qianshiguang° Triste All Rights Reserved ------------------------------------
+        '------------------------------------ Qianshiguang° Triste All Rights Reserved ----------------------------------------------------------------
         '
         '
         '            ██████╗ ██╗   ██╗██╗   ██╗███████╗██╗   ██╗    ████████╗ ██████╗  ██████╗ ██╗     
@@ -19,8 +19,8 @@ Public Class Form1
         '            ╚═╝  ╚═╝   ╚═╝    ╚═════╝ ╚══════╝ ╚═════╝        ╚═╝    ╚═════╝  ╚═════╝ ╚══════╝
         '                                                                                    
         '
-        '---------------------------------------- 浅时光° Triste All Rights Reserved ---------------------------------------
-        '-----------QQ群：https://qm.qq.com/cgi-bin/qm/qr?k=CYpbVCqv2xdQaRck4IMIuzsZHPYEtN5-&jump_from=webapi---------------
+        '---------------------------------------- 浅时光° Triste All Rights Reserved -------------------------------------------------------------------
+        '-----------QQ群（按 Ctrl 键并单击可转到链接）：https://qm.qq.com/cgi-bin/qm/qr?k=CYpbVCqv2xdQaRck4IMIuzsZHPYEtN5-&jump_from=webapi---------------
         '
         '
 
@@ -136,13 +136,16 @@ Public Class Form1
 
         Dim 下载An线程 As New Threading.Thread(AddressOf 下载An)
         下载An线程.Start()
-#End Region
     End Sub
     Dim An正文
     Dim An序号
     Private Sub 下载An()
         If File.Exists(Application.StartupPath & "\An.txt") Then File.Delete(Application.StartupPath & "\An.txt")
-        My.Computer.Network.DownloadFile(My.Resources.Source, Application.StartupPath & "\An.txt")
+        Try
+            My.Computer.Network.DownloadFile(My.Resources.Source, Application.StartupPath & "\An.txt")
+        Catch ex As Exception
+            MsgBox("网络链接失败，但这并不影响使用")
+        End Try
 
 
         Dim 全部内容 As String = File.ReadAllText(Application.StartupPath & "\An.txt")
@@ -155,8 +158,9 @@ Public Class Form1
 
         If 本地序号 <> An序号 Then
             Announcement.TextBox1.Text = An正文
+            Announcement.Tag = An序号
+            Announcement.Label1.Text = "公告 " & An序号
             Announcement.ShowDialog()
-            My.Computer.Registry.CurrentUser.OpenSubKey("SOFTWARE", True).OpenSubKey("RyuzuTool", True).SetValue("An", An序号)
         End If
 
         If File.Exists(Application.StartupPath & "\An.txt") Then File.Delete(Application.StartupPath & "\An.txt")
@@ -166,6 +170,7 @@ Public Class Form1
         Dim 目标文本长度 = InStr(源文本, 结束文本) - 起始位置 - 1
         提取中间文本 = 源文本.Substring(起始位置, 目标文本长度)
     End Function
+#End Region
 
     Private Sub 检测更新()
         Dim 检测更新 As New Process

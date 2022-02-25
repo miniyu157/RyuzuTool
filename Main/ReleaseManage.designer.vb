@@ -60,6 +60,7 @@ Partial Class ReleaseManage
         Me.Label1 = New System.Windows.Forms.Label()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.Label17 = New System.Windows.Forms.Label()
         Me.MaterialTabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.Panel2.SuspendLayout()
@@ -547,12 +548,24 @@ Partial Class ReleaseManage
         Me.Panel1.Size = New System.Drawing.Size(32, 60)
         Me.Panel1.TabIndex = 5
         '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("微软雅黑", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label17.ForeColor = System.Drawing.Color.White
+        Me.Label17.Location = New System.Drawing.Point(29, 555)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(68, 17)
+        Me.Label17.TabIndex = 12
+        Me.Label17.Text = "程序版本："
+        '
         'ReleaseManage
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(29, Byte), Integer), CType(CType(45, Byte), Integer), CType(CType(48, Byte), Integer))
-        Me.ClientSize = New System.Drawing.Size(814, 566)
+        Me.ClientSize = New System.Drawing.Size(814, 584)
+        Me.Controls.Add(Me.Label17)
         Me.Controls.Add(Me.Label16)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.PictureBox2)
@@ -618,4 +631,5 @@ Partial Class ReleaseManage
     Friend WithEvents Label14 As Label
     Friend WithEvents Label15 As Label
     Friend WithEvents Label16 As Label
+    Friend WithEvents Label17 As Label
 End Class

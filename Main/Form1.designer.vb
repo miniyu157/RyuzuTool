@@ -25,6 +25,7 @@ Partial Class Form1
         Me.components = New System.ComponentModel.Container()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Button13 = New System.Windows.Forms.Button()
@@ -34,7 +35,6 @@ Partial Class Form1
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Button18 = New System.Windows.Forms.Button()
         Me.Button17 = New System.Windows.Forms.Button()
@@ -99,11 +99,11 @@ Partial Class Form1
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel3.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.TabPage2.SuspendLayout()
         Me.Panel1.SuspendLayout()
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -156,6 +156,17 @@ Partial Class Form1
         Me.TabPage1.Size = New System.Drawing.Size(580, 440)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "TabPage1"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Default
+        Me.PictureBox1.Image = Global.Main.My.Resources.Resources.QF
+        Me.PictureBox1.Location = New System.Drawing.Point(402, 24)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(90, 90)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox1.TabIndex = 1
+        Me.PictureBox1.TabStop = False
         '
         'Panel4
         '
@@ -254,17 +265,6 @@ Partial Class Form1
         Me.Label5.TabIndex = 18
         Me.Label5.Text = "隔壁 NS模拟器助手（@是一刀斩哒）"
         '
-        'PictureBox1
-        '
-        Me.PictureBox1.Cursor = System.Windows.Forms.Cursors.Default
-        Me.PictureBox1.Image = Global.Main.My.Resources.Resources.QF
-        Me.PictureBox1.Location = New System.Drawing.Point(402, 24)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(90, 90)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 1
-        Me.PictureBox1.TabStop = False
-        '
         'Label4
         '
         Me.Label4.AutoSize = True
@@ -287,7 +287,7 @@ Partial Class Form1
         Me.Button18.Name = "Button18"
         Me.Button18.Size = New System.Drawing.Size(129, 26)
         Me.Button18.TabIndex = 15
-        Me.Button18.Text = "捐助"
+        Me.Button18.Text = "赞助"
         Me.Button18.UseVisualStyleBackColor = True
         '
         'Button17
@@ -1026,11 +1026,11 @@ Partial Class Form1
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel3.ResumeLayout(False)
         Me.Panel2.ResumeLayout(False)
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
         Me.Panel1.ResumeLayout(False)

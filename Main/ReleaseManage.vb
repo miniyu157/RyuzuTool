@@ -157,6 +157,8 @@ Public Class ReleaseManage
                 MaterialTabControl1.SelectedIndex = 0
             End If
         End If
+
+        Label17.Text = "程序版本：" & Application.ProductVersion
     End Sub
 
 #Region "Yuzu"
